@@ -30,22 +30,20 @@
     "rimraf": "^2.6.1"
   },
   "files": [
-    "package.json",
-    "README.md",
     "index.js",
+    "lib",
     "LICENSE",
-    "lib"
+    "package.json",
+    "README.md"
   ],
   "homepage": "https://github.com/szmslab/material-ui-flat-pagination#readme",
   "keywords": [
-    "material-ui",
-    "mui",
     "pagination",
+    "material-ui",
     "react"
   ],
   "license": "MIT",
   "main": "index.js",
-  "private": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/szmslab/material-ui-flat-pagination.git"
