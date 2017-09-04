@@ -50,12 +50,12 @@ class FlatPagination extends React.PureComponent {
     disabled: PropTypes.bool,
     disableTouchRipple: PropTypes.bool,
     hoverColor: PropTypes.string,
-    nextPageLabel: PropTypes.string,
+    nextPageLabel: PropTypes.node,
     onClick: PropTypes.func,
     onTouchTap: PropTypes.func,
     otherPageLabelStyle: PropTypes.object,
     otherPageStyle: PropTypes.object,
-    previousPageLabel: PropTypes.string,
+    previousPageLabel: PropTypes.node,
     rippleColor: PropTypes.string,
     reduced: PropTypes.bool,
     style: PropTypes.object
@@ -139,7 +139,7 @@ class FlatPagination extends React.PureComponent {
     this.props[funcName] && this.props[funcName](e, FlatPagination.getOffset(this.props.limit, targetPage));
   }
 
-  renderButton(label, targetPage, position) {
+  renderButton(position, targetPage, label) {
     const {
       total,
       currentPageLabelStyle,
@@ -155,10 +155,16 @@ class FlatPagination extends React.PureComponent {
     const totalZero = total <= 0;
 
     if (position === 'previous' || position === 'next') {
+      let icon;
+      if (React.isValidElement(label)) {
+        icon = React.cloneElement(label, {
+          style: Object.assign({}, _styles.labelStyle, label.props.style)
+        });
+      }
       return (
         <FlatButton
           key={position}
-          label={label}
+          {...(icon ? {icon: icon} : {label: label})}
           primary={true}
           disabled={disabled || totalZero || targetPage <= 0}
           disableTouchRipple={disableTouchRipple}
@@ -228,11 +234,11 @@ class FlatPagination extends React.PureComponent {
 
     return (
       <div className={'material-ui-flat-pagination' + (className ? ' ' + className : '')} style={style}>
-        {this.renderButton(previousPageLabel, previousPage, 'previous')}
-        {leftLabels.map(label => this.renderButton(label, targetPage(label), 'left'))}
-        {this.renderButton(currentLabel, targetPage(currentLabel), 'current')}
-        {rightLabels.map(label => this.renderButton(label, targetPage(label), 'right'))}
-        {this.renderButton(nextPageLabel, nextPage, 'next')}
+        {this.renderButton('previous', previousPage, previousPageLabel)}
+        {leftLabels.map(label => this.renderButton('left', targetPage(label), label))}
+        {this.renderButton('current', targetPage(currentLabel), currentLabel)}
+        {rightLabels.map(label => this.renderButton('right', targetPage(label), label))}
+        {this.renderButton('next', nextPage, nextPageLabel)}
       </div>
     );
   }
