@@ -7,10 +7,7 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
 import Paper from 'material-ui/Paper';
 import Toggle from 'material-ui/Toggle';
-import injectTapEventPlugin from 'react-tap-event-plugin';
 import FlatPagination from '../src/FlatPagination';
-
-injectTapEventPlugin();
 
 const _defaultTheme = getMuiTheme();
 const _darkTheme = getMuiTheme(darkBaseTheme);
@@ -31,7 +28,7 @@ class Demo extends React.Component {
     muiTheme: _defaultTheme
   };
 
-  handleTouchTap(offset, propName) {
+  handleClick(offset, propName) {
     setTimeout(() => {
       this.setState({
         [propName]: {
@@ -60,14 +57,14 @@ class Demo extends React.Component {
             offset={this.state.defaultPagination.offset}
             limit={this.state.defaultPagination.limit}
             total={this.state.defaultPagination.total}
-            onTouchTap={(e, offset) => this.handleTouchTap(offset, 'defaultPagination')}
+            onClick={(e, offset) => this.handleClick(offset, 'defaultPagination')}
           />
           <h3>Reduced Pagination</h3>
           <FlatPagination
             offset={this.state.reducedPagination.offset}
             limit={this.state.reducedPagination.limit}
             total={this.state.reducedPagination.total}
-            onTouchTap={(e, offset) => this.handleTouchTap(offset, 'reducedPagination')}
+            onClick={(e, offset) => this.handleClick(offset, 'reducedPagination')}
             reduced={true}
           />
           <Toggle

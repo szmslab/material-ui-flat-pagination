@@ -6,10 +6,7 @@ import {mount} from 'enzyme';
 import {mountToJson} from 'enzyme-to-json';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import injectTapEventPlugin from 'react-tap-event-plugin';
 import FlatPagination from '../src/FlatPagination';
-
-injectTapEventPlugin();
 
 describe('Basic Pagination (reduced=false)', () => {
   const wrapper = (commonProps, otherProps) => {
@@ -23,9 +20,8 @@ describe('Basic Pagination (reduced=false)', () => {
 
   const anyObj = expect.any(Object);
 
-  const clickOrTouchTapWrapper = (propName, testFn) => {
-    const map = {onClick: 'click', onTouchTap: 'touchTap'};
-    testFn(propName, map[propName]);
+  const clickWrapper = (testFn) => {
+    testFn('onClick', 'click');
   };
 
   // ********************************************************************************
@@ -51,7 +47,7 @@ describe('Basic Pagination (reduced=false)', () => {
       expect(target).toMatchSnapshot();
     });
 
-    const clickOrTouchTap = (propName, simulateName) => {
+    const clickFn = (propName, simulateName) => {
       describe(propName, () => {
         const fnMock = jest.fn();
         const buttons = wrapper(props, {[propName]: fnMock}).find('button');
@@ -68,8 +64,7 @@ describe('Basic Pagination (reduced=false)', () => {
         }
       });
     };
-    clickOrTouchTapWrapper('onClick', clickOrTouchTap);
-    clickOrTouchTapWrapper('onTouchTap', clickOrTouchTap);
+    clickWrapper(clickFn);
   });
 
   // ********************************************************************************
@@ -95,7 +90,7 @@ describe('Basic Pagination (reduced=false)', () => {
       expect(target).toMatchSnapshot();
     });
 
-    const clickOrTouchTap = (propName, simulateName) => {
+    const clickFn = (propName, simulateName) => {
       describe(propName, () => {
         const fnMock = jest.fn();
         const buttons = wrapper(props, {[propName]: fnMock}).find('button');
@@ -124,8 +119,7 @@ describe('Basic Pagination (reduced=false)', () => {
         }
       });
     };
-    clickOrTouchTapWrapper('onClick', clickOrTouchTap);
-    clickOrTouchTapWrapper('onTouchTap', clickOrTouchTap);
+    clickWrapper(clickFn);
   });
 
   // ********************************************************************************
@@ -151,7 +145,7 @@ describe('Basic Pagination (reduced=false)', () => {
       expect(target).toMatchSnapshot();
     });
 
-    const clickOrTouchTap = (propName, simulateName) => {
+    const clickFn = (propName, simulateName) => {
       describe(propName, () => {
         const fnMock = jest.fn();
         const buttons = wrapper(props, {[propName]: fnMock}).find('button');
@@ -180,8 +174,7 @@ describe('Basic Pagination (reduced=false)', () => {
         }
       });
     };
-    clickOrTouchTapWrapper('onClick', clickOrTouchTap);
-    clickOrTouchTapWrapper('onTouchTap', clickOrTouchTap);
+    clickWrapper(clickFn);
   });
 
   // ********************************************************************************
@@ -207,7 +200,7 @@ describe('Basic Pagination (reduced=false)', () => {
       expect(target).toMatchSnapshot();
     });
 
-    const clickOrTouchTap = (propName, simulateName) => {
+    const clickFn = (propName, simulateName) => {
       describe(propName, () => {
         const fnMock = jest.fn();
         const buttons = wrapper(props, {[propName]: fnMock}).find('button');
@@ -244,8 +237,7 @@ describe('Basic Pagination (reduced=false)', () => {
         }
       });
     };
-    clickOrTouchTapWrapper('onClick', clickOrTouchTap);
-    clickOrTouchTapWrapper('onTouchTap', clickOrTouchTap);
+    clickWrapper(clickFn);
   });
 
   // ********************************************************************************
@@ -271,7 +263,7 @@ describe('Basic Pagination (reduced=false)', () => {
       expect(target).toMatchSnapshot();
     });
 
-    const clickOrTouchTap = (propName, simulateName) => {
+    const clickFn = (propName, simulateName) => {
       describe(propName, () => {
         const fnMock = jest.fn();
         const buttons = wrapper(props, {[propName]: fnMock}).find('button');
@@ -308,8 +300,7 @@ describe('Basic Pagination (reduced=false)', () => {
         }
       });
     };
-    clickOrTouchTapWrapper('onClick', clickOrTouchTap);
-    clickOrTouchTapWrapper('onTouchTap', clickOrTouchTap);
+    clickWrapper(clickFn);
   });
 
   // ********************************************************************************
@@ -335,7 +326,7 @@ describe('Basic Pagination (reduced=false)', () => {
       expect(target).toMatchSnapshot();
     });
 
-    const clickOrTouchTap = (propName, simulateName) => {
+    const clickFn = (propName, simulateName) => {
       describe(propName, () => {
         const fnMock = jest.fn();
         const buttons = wrapper(props, {[propName]: fnMock}).find('button');
@@ -372,8 +363,7 @@ describe('Basic Pagination (reduced=false)', () => {
         }
       });
     };
-    clickOrTouchTapWrapper('onClick', clickOrTouchTap);
-    clickOrTouchTapWrapper('onTouchTap', clickOrTouchTap);
+    clickWrapper(clickFn);
   });
 
   // ********************************************************************************
@@ -399,7 +389,7 @@ describe('Basic Pagination (reduced=false)', () => {
       expect(target).toMatchSnapshot();
     });
 
-    const clickOrTouchTap = (propName, simulateName) => {
+    const clickFn = (propName, simulateName) => {
       describe(propName, () => {
         const fnMock = jest.fn();
         const buttons = wrapper(props, {[propName]: fnMock}).find('button');
@@ -436,8 +426,7 @@ describe('Basic Pagination (reduced=false)', () => {
         }
       });
     };
-    clickOrTouchTapWrapper('onClick', clickOrTouchTap);
-    clickOrTouchTapWrapper('onTouchTap', clickOrTouchTap);
+    clickWrapper(clickFn);
   });
 
   // ********************************************************************************
@@ -463,7 +452,7 @@ describe('Basic Pagination (reduced=false)', () => {
       expect(target).toMatchSnapshot();
     });
 
-    const clickOrTouchTap = (propName, simulateName) => {
+    const clickFn = (propName, simulateName) => {
       describe(propName, () => {
         const fnMock = jest.fn();
         const buttons = wrapper(props, {[propName]: fnMock}).find('button');
@@ -500,8 +489,7 @@ describe('Basic Pagination (reduced=false)', () => {
         }
       });
     };
-    clickOrTouchTapWrapper('onClick', clickOrTouchTap);
-    clickOrTouchTapWrapper('onTouchTap', clickOrTouchTap);
+    clickWrapper(clickFn);
   });
 
   // ********************************************************************************
@@ -527,7 +515,7 @@ describe('Basic Pagination (reduced=false)', () => {
       expect(target).toMatchSnapshot();
     });
 
-    const clickOrTouchTap = (propName, simulateName) => {
+    const clickFn = (propName, simulateName) => {
       describe(propName, () => {
         const fnMock = jest.fn();
         const buttons = wrapper(props, {[propName]: fnMock}).find('button');
@@ -566,8 +554,7 @@ describe('Basic Pagination (reduced=false)', () => {
         }
       });
     };
-    clickOrTouchTapWrapper('onClick', clickOrTouchTap);
-    clickOrTouchTapWrapper('onTouchTap', clickOrTouchTap);
+    clickWrapper(clickFn);
   });
 
   // ********************************************************************************
@@ -593,7 +580,7 @@ describe('Basic Pagination (reduced=false)', () => {
       expect(target).toMatchSnapshot();
     });
 
-    const clickOrTouchTap = (propName, simulateName) => {
+    const clickFn = (propName, simulateName) => {
       describe(propName, () => {
         const fnMock = jest.fn();
         const buttons = wrapper(props, {[propName]: fnMock}).find('button');
@@ -634,8 +621,7 @@ describe('Basic Pagination (reduced=false)', () => {
         }
       });
     };
-    clickOrTouchTapWrapper('onClick', clickOrTouchTap);
-    clickOrTouchTapWrapper('onTouchTap', clickOrTouchTap);
+    clickWrapper(clickFn);
   });
 
   // ********************************************************************************
@@ -661,7 +647,7 @@ describe('Basic Pagination (reduced=false)', () => {
       expect(target).toMatchSnapshot();
     });
 
-    const clickOrTouchTap = (propName, simulateName) => {
+    const clickFn = (propName, simulateName) => {
       describe(propName, () => {
         const fnMock = jest.fn();
         const buttons = wrapper(props, {[propName]: fnMock}).find('button');
@@ -702,8 +688,7 @@ describe('Basic Pagination (reduced=false)', () => {
         }
       });
     };
-    clickOrTouchTapWrapper('onClick', clickOrTouchTap);
-    clickOrTouchTapWrapper('onTouchTap', clickOrTouchTap);
+    clickWrapper(clickFn);
   });
 
   // ********************************************************************************
@@ -729,7 +714,7 @@ describe('Basic Pagination (reduced=false)', () => {
       expect(target).toMatchSnapshot();
     });
 
-    const clickOrTouchTap = (propName, simulateName) => {
+    const clickFn = (propName, simulateName) => {
       describe(propName, () => {
         const fnMock = jest.fn();
         const buttons = wrapper(props, {[propName]: fnMock}).find('button');
@@ -768,8 +753,7 @@ describe('Basic Pagination (reduced=false)', () => {
         }
       });
     };
-    clickOrTouchTapWrapper('onClick', clickOrTouchTap);
-    clickOrTouchTapWrapper('onTouchTap', clickOrTouchTap);
+    clickWrapper(clickFn);
   });
 
   // ********************************************************************************
@@ -795,7 +779,7 @@ describe('Basic Pagination (reduced=false)', () => {
       expect(target).toMatchSnapshot();
     });
 
-    const clickOrTouchTap = (propName, simulateName) => {
+    const clickFn = (propName, simulateName) => {
       describe(propName, () => {
         const fnMock = jest.fn();
         const buttons = wrapper(props, {[propName]: fnMock}).find('button');
@@ -832,7 +816,6 @@ describe('Basic Pagination (reduced=false)', () => {
         }
       });
     };
-    clickOrTouchTapWrapper('onClick', clickOrTouchTap);
-    clickOrTouchTapWrapper('onTouchTap', clickOrTouchTap);
+    clickWrapper(clickFn);
   });
 });

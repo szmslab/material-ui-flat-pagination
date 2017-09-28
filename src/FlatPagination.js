@@ -52,17 +52,12 @@ class FlatPagination extends React.PureComponent {
     hoverColor: PropTypes.string,
     nextPageLabel: PropTypes.node,
     onClick: PropTypes.func,
-    onTouchTap: PropTypes.func,
     otherPageLabelStyle: PropTypes.object,
     otherPageStyle: PropTypes.object,
     previousPageLabel: PropTypes.node,
     rippleColor: PropTypes.string,
     reduced: PropTypes.bool,
     style: PropTypes.object
-  };
-
-  static contextTypes = {
-    muiTheme: PropTypes.object.isRequired,
   };
 
   static defaultProps = {
@@ -135,8 +130,8 @@ class FlatPagination extends React.PureComponent {
     return (page - 1) * limit;
   }
 
-  handleClick(e, funcName, targetPage) {
-    this.props[funcName] && this.props[funcName](e, FlatPagination.getOffset(this.props.limit, targetPage));
+  handleClick(e, targetPage) {
+    this.props.onClick && this.props.onClick(e, FlatPagination.getOffset(this.props.limit, targetPage));
   }
 
   renderButton(position, targetPage, label) {
@@ -158,7 +153,7 @@ class FlatPagination extends React.PureComponent {
       let icon;
       if (React.isValidElement(label)) {
         icon = React.cloneElement(label, {
-          style: Object.assign({}, _styles.labelStyle, label.props.style)
+          style: {..._styles.labelStyle, ...label.props.style}
         });
       }
       return (
@@ -168,17 +163,15 @@ class FlatPagination extends React.PureComponent {
           primary={true}
           disabled={disabled || totalZero || targetPage <= 0}
           disableTouchRipple={disableTouchRipple}
-          labelStyle={Object.assign({}, _styles.labelStyle, otherPageLabelStyle)}
+          labelStyle={{..._styles.labelStyle, ...otherPageLabelStyle}}
           hoverColor={hoverColor}
-          onClick={e => this.handleClick(e, 'onClick', targetPage)}
-          onTouchTap={e => this.handleClick(e, 'onTouchTap', targetPage)}
+          onClick={e => this.handleClick(e, targetPage)}
           rippleColor={rippleColor}
-          style={Object.assign({}, _styles.buttonStyle, otherPageStyle)}
+          style={{..._styles.buttonStyle, ...otherPageStyle}}
         />
       );
     } else if (position === 'left' || position === 'right') {
       const isEllipsis = label === _ellipsisLabel;
-      const labelStyle = isEllipsis ? _styles.ellipsisLabelStyle : _styles.labelStyle;
       return (
         <FlatButton
           key={isEllipsis ? position + 'Ellipsis' : label}
@@ -186,12 +179,11 @@ class FlatPagination extends React.PureComponent {
           primary={true}
           disabled={disabled || totalZero || isEllipsis}
           disableTouchRipple={disableTouchRipple}
-          labelStyle={Object.assign({}, labelStyle, otherPageLabelStyle)}
+          labelStyle={{...(isEllipsis ? _styles.ellipsisLabelStyle : _styles.labelStyle), ...otherPageLabelStyle}}
           hoverColor={hoverColor}
-          onClick={e => this.handleClick(e, 'onClick', targetPage)}
-          onTouchTap={e => this.handleClick(e, 'onTouchTap', targetPage)}
+          onClick={e => this.handleClick(e, targetPage)}
           rippleColor={rippleColor}
-          style={Object.assign({}, _styles.buttonStyle, otherPageStyle)}
+          style={{..._styles.buttonStyle, ...otherPageStyle}}
         />
       );
     } else {
@@ -202,9 +194,9 @@ class FlatPagination extends React.PureComponent {
           secondary={true}
           disabled={disabled || totalZero}
           disableTouchRipple={true}
-          labelStyle={Object.assign({}, _styles.labelStyle, currentPageLabelStyle)}
+          labelStyle={{..._styles.labelStyle, ...currentPageLabelStyle}}
           hoverColor={hoverColor}
-          style={Object.assign({}, _styles.buttonStyle, currentPageStyle)}
+          style={{..._styles.buttonStyle, ...currentPageStyle}}
         />
       );
     }

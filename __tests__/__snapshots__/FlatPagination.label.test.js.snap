@@ -8,6 +8,7 @@ exports[`Pagination Label nextPageLabel snapshot 1`] = `
     disableTouchRipple={false}
     disabled={true}
     fullWidth={false}
+    key="previous"
     label="<"
     labelPosition="after"
     labelStyle={
@@ -20,7 +21,6 @@ exports[`Pagination Label nextPageLabel snapshot 1`] = `
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
     onTouchStart={[Function]}
-    onTouchTap={[Function]}
     primary={true}
     secondary={false}
     style={
@@ -44,7 +44,6 @@ exports[`Pagination Label nextPageLabel snapshot 1`] = `
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       onTouchStart={[Function]}
-      onTouchTap={[Function]}
       style={
         Object {
           "backgroundColor": "rgba(0, 0, 0, 0)",
@@ -76,7 +75,6 @@ exports[`Pagination Label nextPageLabel snapshot 1`] = `
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
         onTouchStart={[Function]}
-        onTouchTap={[Function]}
         style={
           Object {
             "WebkitTapHighlightColor": "rgba(0, 0, 0, 0)",
@@ -111,6 +109,7 @@ exports[`Pagination Label nextPageLabel snapshot 1`] = `
         type="button"
       >
         <FlatButtonLabel
+          key="labelElement"
           label="<"
           style={
             Object {
@@ -148,6 +147,7 @@ exports[`Pagination Label nextPageLabel snapshot 1`] = `
     disableTouchRipple={true}
     disabled={false}
     fullWidth={false}
+    key="1"
     label="1"
     labelPosition="after"
     labelStyle={
@@ -182,7 +182,6 @@ exports[`Pagination Label nextPageLabel snapshot 1`] = `
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       onTouchStart={[Function]}
-      onTouchTap={[Function]}
       style={
         Object {
           "backgroundColor": "rgba(0, 0, 0, 0)",
@@ -214,7 +213,6 @@ exports[`Pagination Label nextPageLabel snapshot 1`] = `
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
         onTouchStart={[Function]}
-        onTouchTap={[Function]}
         style={
           Object {
             "WebkitTapHighlightColor": "rgba(0, 0, 0, 0)",
@@ -249,6 +247,7 @@ exports[`Pagination Label nextPageLabel snapshot 1`] = `
         type="button"
       >
         <FlatButtonLabel
+          key="labelElement"
           label="1"
           style={
             Object {
@@ -295,6 +294,7 @@ exports[`Pagination Label nextPageLabel snapshot 1`] = `
         }
       />
     }
+    key="next"
     labelPosition="after"
     labelStyle={
       Object {
@@ -306,7 +306,6 @@ exports[`Pagination Label nextPageLabel snapshot 1`] = `
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
     onTouchStart={[Function]}
-    onTouchTap={[Function]}
     primary={true}
     secondary={false}
     style={
@@ -330,7 +329,6 @@ exports[`Pagination Label nextPageLabel snapshot 1`] = `
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       onTouchStart={[Function]}
-      onTouchTap={[Function]}
       style={
         Object {
           "backgroundColor": "rgba(0, 0, 0, 0)",
@@ -362,7 +360,6 @@ exports[`Pagination Label nextPageLabel snapshot 1`] = `
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
         onTouchStart={[Function]}
-        onTouchTap={[Function]}
         style={
           Object {
             "WebkitTapHighlightColor": "rgba(0, 0, 0, 0)",
@@ -398,6 +395,7 @@ exports[`Pagination Label nextPageLabel snapshot 1`] = `
       >
         <NavigationArrowForward
           color="rgba(0, 0, 0, 0.3)"
+          key="iconCloned"
           style={
             Object {
               "marginLeft": 0,
@@ -471,6 +469,7 @@ exports[`Pagination Label previousPageLabel snapshot 1`] = `
         }
       />
     }
+    key="previous"
     labelPosition="after"
     labelStyle={
       Object {
@@ -482,7 +481,6 @@ exports[`Pagination Label previousPageLabel snapshot 1`] = `
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
     onTouchStart={[Function]}
-    onTouchTap={[Function]}
     primary={true}
     secondary={false}
     style={
@@ -506,7 +504,6 @@ exports[`Pagination Label previousPageLabel snapshot 1`] = `
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       onTouchStart={[Function]}
-      onTouchTap={[Function]}
       style={
         Object {
           "backgroundColor": "rgba(0, 0, 0, 0)",
@@ -538,7 +535,6 @@ exports[`Pagination Label previousPageLabel snapshot 1`] = `
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
         onTouchStart={[Function]}
-        onTouchTap={[Function]}
         style={
           Object {
             "WebkitTapHighlightColor": "rgba(0, 0, 0, 0)",
@@ -574,6 +570,7 @@ exports[`Pagination Label previousPageLabel snapshot 1`] = `
       >
         <NavigationArrowBack
           color="rgba(0, 0, 0, 0.3)"
+          key="iconCloned"
           style={
             Object {
               "marginLeft": 0,
@@ -631,6 +628,7 @@ exports[`Pagination Label previousPageLabel snapshot 1`] = `
     disableTouchRipple={true}
     disabled={false}
     fullWidth={false}
+    key="1"
     label="1"
     labelPosition="after"
     labelStyle={
@@ -665,7 +663,6 @@ exports[`Pagination Label previousPageLabel snapshot 1`] = `
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       onTouchStart={[Function]}
-      onTouchTap={[Function]}
       style={
         Object {
           "backgroundColor": "rgba(0, 0, 0, 0)",
@@ -697,7 +694,6 @@ exports[`Pagination Label previousPageLabel snapshot 1`] = `
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
         onTouchStart={[Function]}
-        onTouchTap={[Function]}
         style={
           Object {
             "WebkitTapHighlightColor": "rgba(0, 0, 0, 0)",
@@ -732,6 +728,7 @@ exports[`Pagination Label previousPageLabel snapshot 1`] = `
         type="button"
       >
         <FlatButtonLabel
+          key="labelElement"
           label="1"
           style={
             Object {
@@ -769,6 +766,7 @@ exports[`Pagination Label previousPageLabel snapshot 1`] = `
     disableTouchRipple={false}
     disabled={true}
     fullWidth={false}
+    key="next"
     label=">"
     labelPosition="after"
     labelStyle={
@@ -781,7 +779,6 @@ exports[`Pagination Label previousPageLabel snapshot 1`] = `
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
     onTouchStart={[Function]}
-    onTouchTap={[Function]}
     primary={true}
     secondary={false}
     style={
@@ -805,7 +802,6 @@ exports[`Pagination Label previousPageLabel snapshot 1`] = `
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       onTouchStart={[Function]}
-      onTouchTap={[Function]}
       style={
         Object {
           "backgroundColor": "rgba(0, 0, 0, 0)",
@@ -837,7 +833,6 @@ exports[`Pagination Label previousPageLabel snapshot 1`] = `
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
         onTouchStart={[Function]}
-        onTouchTap={[Function]}
         style={
           Object {
             "WebkitTapHighlightColor": "rgba(0, 0, 0, 0)",
@@ -872,6 +867,7 @@ exports[`Pagination Label previousPageLabel snapshot 1`] = `
         type="button"
       >
         <FlatButtonLabel
+          key="labelElement"
           label=">"
           style={
             Object {

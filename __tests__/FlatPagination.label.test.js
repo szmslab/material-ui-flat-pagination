@@ -5,12 +5,9 @@ import {mount} from 'enzyme';
 import {mountToJson} from 'enzyme-to-json';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import injectTapEventPlugin from 'react-tap-event-plugin';
 import FlatPagination from '../src/FlatPagination';
 import NavigationArrowBack from 'material-ui/svg-icons/navigation/arrow-back';
 import NavigationArrowForward from 'material-ui/svg-icons/navigation/arrow-forward';
-
-injectTapEventPlugin();
 
 describe('Pagination Label', () => {
   const wrapper = (commonProps, otherProps) => {

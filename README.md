@@ -23,10 +23,7 @@ npm install material-ui-flat-pagination --save
 import React from 'react';
 import ReactDOM from 'react-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import injectTapEventPlugin from 'react-tap-event-plugin';
 import FlatPagination from 'material-ui-flat-pagination';
-
-injectTapEventPlugin();
 
 class Example extends React.Component {
   constructor() {
@@ -34,7 +31,7 @@ class Example extends React.Component {
     this.state = {offset: 0};
   }
 
-  handleTouchTap(offset) {
+  handleClick(offset) {
     this.setState({offset});
   }
 
@@ -45,7 +42,7 @@ class Example extends React.Component {
           offset={this.state.offset}
           limit={10}
           total={100}
-          onTouchTap={(e, offset) => this.handleTouchTap(offset)}
+          onClick={(e, offset) => this.handleClick(offset)}
         />
       </MuiThemeProvider>
     );
@@ -65,15 +62,14 @@ ReactDOM.render(
 | **`limit`** (required) | validateNumber |  | The number of rows per page. Allow a number greater than or equal to `1`.|
 | **`offset`** (required) | validateNumber |  | The number of rows to skip. Allow a number greater than or equal to `0`.|
 | **`total`** (required) | validateNumber |  | The total number of rows. Allow a number greater than or equal to `0`.|
-| `className` | string |  | The css class name of the root element. |
+| `className` | string |  | The CSS class name of the root element. |
 | `currentPageLabelStyle` | object |  | Override the inline-styles of the button's label element of current page. |
 | `currentPageStyle` | object |  | Override the inline-styles of the button element of current page. |
 | `disabled` | bool | false | If true, the button will be disabled. |
 | `disableTouchRipple` | bool | false | If true, the button's ripple effect will be disabled. |
 | `hoverColor` | string |  | Color of button when mouse hovers over. |
 | `nextPageLabel` | node | '>' | Label for the next page button. |
-| `onClick` | func |  | Callback function fired when the button is clicked.<br><br>Signature:<br>`function(event: object, offset: number) => void`<br>event: Click event targeting the button.<br>offset: The number of new offset. |
-| `onTouchTap` | func |  | Callback function fired when the button is touch-tapped.<br><br>Signature:<br>`function(event: object, offset: number) => void`<br>event: TouchTap event targeting the button.<br>offset: The number of new offset. |
+| `onClick` | func |  | Callback function fired when the button is touch-tapped.<br><br>Signature:<br>`function(event: object, offset: number) => void`<br>event: TouchTap event targeting the button.<br>offset: The number of new offset. |
 | `otherPageLabelStyle` | object |  | Override the inline-styles of the button's label element of other pages except the current page. |
 | `otherPageStyle` | object |  | Override the inline-styles of the button element of other pages except the current page. |
 | `previousPageLabel` | node | '<' | Label for the previous page button. |

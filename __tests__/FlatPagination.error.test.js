@@ -4,10 +4,7 @@ import React from 'react';
 import {mount} from 'enzyme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import injectTapEventPlugin from 'react-tap-event-plugin';
 import FlatPagination from '../src/FlatPagination';
-
-injectTapEventPlugin();
 
 describe('Pagination Error Case', () => {
   console.error = jest.fn(error => {
