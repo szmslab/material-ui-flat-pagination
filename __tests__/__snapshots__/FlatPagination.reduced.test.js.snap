@@ -102,7 +102,6 @@ exports[`Reduced Pagination (reduced=true) offset: 0, limit: 10, total: 10 snaps
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={-1}
@@ -240,7 +239,6 @@ exports[`Reduced Pagination (reduced=true) offset: 0, limit: 10, total: 10 snaps
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -379,7 +377,6 @@ exports[`Reduced Pagination (reduced=true) offset: 0, limit: 10, total: 10 snaps
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={-1}
@@ -525,7 +522,6 @@ exports[`Reduced Pagination (reduced=true) offset: 0, limit: 10, total: 11 snaps
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={-1}
@@ -663,7 +659,6 @@ exports[`Reduced Pagination (reduced=true) offset: 0, limit: 10, total: 11 snaps
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -802,7 +797,6 @@ exports[`Reduced Pagination (reduced=true) offset: 0, limit: 10, total: 11 snaps
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -956,7 +950,6 @@ exports[`Reduced Pagination (reduced=true) offset: 0, limit: 10, total: 11 snaps
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -1117,7 +1110,6 @@ exports[`Reduced Pagination (reduced=true) offset: 0, limit: 10, total: 60 snaps
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={-1}
@@ -1255,7 +1247,6 @@ exports[`Reduced Pagination (reduced=true) offset: 0, limit: 10, total: 60 snaps
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -1394,7 +1385,6 @@ exports[`Reduced Pagination (reduced=true) offset: 0, limit: 10, total: 60 snaps
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -1548,7 +1538,6 @@ exports[`Reduced Pagination (reduced=true) offset: 0, limit: 10, total: 60 snaps
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -1702,7 +1691,6 @@ exports[`Reduced Pagination (reduced=true) offset: 0, limit: 10, total: 60 snaps
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={-1}
@@ -1841,7 +1829,6 @@ exports[`Reduced Pagination (reduced=true) offset: 0, limit: 10, total: 60 snaps
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -1995,7 +1982,6 @@ exports[`Reduced Pagination (reduced=true) offset: 0, limit: 10, total: 60 snaps
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -2156,7 +2142,6 @@ exports[`Reduced Pagination (reduced=true) offset: 0, limit: 10, total: 1000 sna
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={-1}
@@ -2294,7 +2279,6 @@ exports[`Reduced Pagination (reduced=true) offset: 0, limit: 10, total: 1000 sna
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -2433,7 +2417,6 @@ exports[`Reduced Pagination (reduced=true) offset: 0, limit: 10, total: 1000 sna
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -2587,7 +2570,6 @@ exports[`Reduced Pagination (reduced=true) offset: 0, limit: 10, total: 1000 sna
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -2741,7 +2723,6 @@ exports[`Reduced Pagination (reduced=true) offset: 0, limit: 10, total: 1000 sna
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={-1}
@@ -2880,7 +2861,6 @@ exports[`Reduced Pagination (reduced=true) offset: 0, limit: 10, total: 1000 sna
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -3034,7 +3014,6 @@ exports[`Reduced Pagination (reduced=true) offset: 0, limit: 10, total: 1000 sna
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -3195,7 +3174,6 @@ exports[`Reduced Pagination (reduced=true) offset: 10, limit: 10, total: 11 snap
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -3349,7 +3327,6 @@ exports[`Reduced Pagination (reduced=true) offset: 10, limit: 10, total: 11 snap
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -3502,7 +3479,6 @@ exports[`Reduced Pagination (reduced=true) offset: 10, limit: 10, total: 11 snap
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -3641,7 +3617,6 @@ exports[`Reduced Pagination (reduced=true) offset: 10, limit: 10, total: 11 snap
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={-1}
@@ -3787,7 +3762,6 @@ exports[`Reduced Pagination (reduced=true) offset: 20, limit: 10, total: 60 snap
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -3941,7 +3915,6 @@ exports[`Reduced Pagination (reduced=true) offset: 20, limit: 10, total: 60 snap
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -4095,7 +4068,6 @@ exports[`Reduced Pagination (reduced=true) offset: 20, limit: 10, total: 60 snap
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -4248,7 +4220,6 @@ exports[`Reduced Pagination (reduced=true) offset: 20, limit: 10, total: 60 snap
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -4387,7 +4358,6 @@ exports[`Reduced Pagination (reduced=true) offset: 20, limit: 10, total: 60 snap
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -4541,7 +4511,6 @@ exports[`Reduced Pagination (reduced=true) offset: 20, limit: 10, total: 60 snap
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -4695,7 +4664,6 @@ exports[`Reduced Pagination (reduced=true) offset: 20, limit: 10, total: 60 snap
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -4849,7 +4817,6 @@ exports[`Reduced Pagination (reduced=true) offset: 20, limit: 10, total: 60 snap
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -5010,7 +4977,6 @@ exports[`Reduced Pagination (reduced=true) offset: 30, limit: 10, total: 60 snap
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -5164,7 +5130,6 @@ exports[`Reduced Pagination (reduced=true) offset: 30, limit: 10, total: 60 snap
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -5318,7 +5283,6 @@ exports[`Reduced Pagination (reduced=true) offset: 30, limit: 10, total: 60 snap
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -5472,7 +5436,6 @@ exports[`Reduced Pagination (reduced=true) offset: 30, limit: 10, total: 60 snap
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -5625,7 +5588,6 @@ exports[`Reduced Pagination (reduced=true) offset: 30, limit: 10, total: 60 snap
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -5764,7 +5726,6 @@ exports[`Reduced Pagination (reduced=true) offset: 30, limit: 10, total: 60 snap
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -5918,7 +5879,6 @@ exports[`Reduced Pagination (reduced=true) offset: 30, limit: 10, total: 60 snap
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -6072,7 +6032,6 @@ exports[`Reduced Pagination (reduced=true) offset: 30, limit: 10, total: 60 snap
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -6233,7 +6192,6 @@ exports[`Reduced Pagination (reduced=true) offset: 30, limit: 10, total: 1000 sn
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -6387,7 +6345,6 @@ exports[`Reduced Pagination (reduced=true) offset: 30, limit: 10, total: 1000 sn
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -6541,7 +6498,6 @@ exports[`Reduced Pagination (reduced=true) offset: 30, limit: 10, total: 1000 sn
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -6695,7 +6651,6 @@ exports[`Reduced Pagination (reduced=true) offset: 30, limit: 10, total: 1000 sn
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -6848,7 +6803,6 @@ exports[`Reduced Pagination (reduced=true) offset: 30, limit: 10, total: 1000 sn
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -6987,7 +6941,6 @@ exports[`Reduced Pagination (reduced=true) offset: 30, limit: 10, total: 1000 sn
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -7141,7 +7094,6 @@ exports[`Reduced Pagination (reduced=true) offset: 30, limit: 10, total: 1000 sn
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={-1}
@@ -7280,7 +7232,6 @@ exports[`Reduced Pagination (reduced=true) offset: 30, limit: 10, total: 1000 sn
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -7434,7 +7385,6 @@ exports[`Reduced Pagination (reduced=true) offset: 30, limit: 10, total: 1000 sn
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -7595,7 +7545,6 @@ exports[`Reduced Pagination (reduced=true) offset: 40, limit: 10, total: 1000 sn
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -7749,7 +7698,6 @@ exports[`Reduced Pagination (reduced=true) offset: 40, limit: 10, total: 1000 sn
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -7903,7 +7851,6 @@ exports[`Reduced Pagination (reduced=true) offset: 40, limit: 10, total: 1000 sn
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={-1}
@@ -8042,7 +7989,6 @@ exports[`Reduced Pagination (reduced=true) offset: 40, limit: 10, total: 1000 sn
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -8195,7 +8141,6 @@ exports[`Reduced Pagination (reduced=true) offset: 40, limit: 10, total: 1000 sn
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -8334,7 +8279,6 @@ exports[`Reduced Pagination (reduced=true) offset: 40, limit: 10, total: 1000 sn
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -8488,7 +8432,6 @@ exports[`Reduced Pagination (reduced=true) offset: 40, limit: 10, total: 1000 sn
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={-1}
@@ -8627,7 +8570,6 @@ exports[`Reduced Pagination (reduced=true) offset: 40, limit: 10, total: 1000 sn
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -8781,7 +8723,6 @@ exports[`Reduced Pagination (reduced=true) offset: 40, limit: 10, total: 1000 sn
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -8942,7 +8883,6 @@ exports[`Reduced Pagination (reduced=true) offset: 50, limit: 10, total: 60 snap
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -9096,7 +9036,6 @@ exports[`Reduced Pagination (reduced=true) offset: 50, limit: 10, total: 60 snap
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -9250,7 +9189,6 @@ exports[`Reduced Pagination (reduced=true) offset: 50, limit: 10, total: 60 snap
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={-1}
@@ -9389,7 +9327,6 @@ exports[`Reduced Pagination (reduced=true) offset: 50, limit: 10, total: 60 snap
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -9543,7 +9480,6 @@ exports[`Reduced Pagination (reduced=true) offset: 50, limit: 10, total: 60 snap
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -9696,7 +9632,6 @@ exports[`Reduced Pagination (reduced=true) offset: 50, limit: 10, total: 60 snap
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -9835,7 +9770,6 @@ exports[`Reduced Pagination (reduced=true) offset: 50, limit: 10, total: 60 snap
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={-1}
@@ -9981,7 +9915,6 @@ exports[`Reduced Pagination (reduced=true) offset: 950, limit: 10, total: 1000 s
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -10135,7 +10068,6 @@ exports[`Reduced Pagination (reduced=true) offset: 950, limit: 10, total: 1000 s
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -10289,7 +10221,6 @@ exports[`Reduced Pagination (reduced=true) offset: 950, limit: 10, total: 1000 s
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={-1}
@@ -10428,7 +10359,6 @@ exports[`Reduced Pagination (reduced=true) offset: 950, limit: 10, total: 1000 s
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -10581,7 +10511,6 @@ exports[`Reduced Pagination (reduced=true) offset: 950, limit: 10, total: 1000 s
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -10720,7 +10649,6 @@ exports[`Reduced Pagination (reduced=true) offset: 950, limit: 10, total: 1000 s
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -10874,7 +10802,6 @@ exports[`Reduced Pagination (reduced=true) offset: 950, limit: 10, total: 1000 s
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={-1}
@@ -11013,7 +10940,6 @@ exports[`Reduced Pagination (reduced=true) offset: 950, limit: 10, total: 1000 s
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -11167,7 +11093,6 @@ exports[`Reduced Pagination (reduced=true) offset: 950, limit: 10, total: 1000 s
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -11328,7 +11253,6 @@ exports[`Reduced Pagination (reduced=true) offset: 960, limit: 10, total: 1000 s
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -11482,7 +11406,6 @@ exports[`Reduced Pagination (reduced=true) offset: 960, limit: 10, total: 1000 s
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -11636,7 +11559,6 @@ exports[`Reduced Pagination (reduced=true) offset: 960, limit: 10, total: 1000 s
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={-1}
@@ -11775,7 +11697,6 @@ exports[`Reduced Pagination (reduced=true) offset: 960, limit: 10, total: 1000 s
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -11928,7 +11849,6 @@ exports[`Reduced Pagination (reduced=true) offset: 960, limit: 10, total: 1000 s
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -12067,7 +11987,6 @@ exports[`Reduced Pagination (reduced=true) offset: 960, limit: 10, total: 1000 s
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -12221,7 +12140,6 @@ exports[`Reduced Pagination (reduced=true) offset: 960, limit: 10, total: 1000 s
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -12375,7 +12293,6 @@ exports[`Reduced Pagination (reduced=true) offset: 960, limit: 10, total: 1000 s
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -12529,7 +12446,6 @@ exports[`Reduced Pagination (reduced=true) offset: 960, limit: 10, total: 1000 s
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -12690,7 +12606,6 @@ exports[`Reduced Pagination (reduced=true) offset: 990, limit: 10, total: 1000 s
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -12844,7 +12759,6 @@ exports[`Reduced Pagination (reduced=true) offset: 990, limit: 10, total: 1000 s
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -12998,7 +12912,6 @@ exports[`Reduced Pagination (reduced=true) offset: 990, limit: 10, total: 1000 s
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={-1}
@@ -13137,7 +13050,6 @@ exports[`Reduced Pagination (reduced=true) offset: 990, limit: 10, total: 1000 s
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -13291,7 +13203,6 @@ exports[`Reduced Pagination (reduced=true) offset: 990, limit: 10, total: 1000 s
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -13444,7 +13355,6 @@ exports[`Reduced Pagination (reduced=true) offset: 990, limit: 10, total: 1000 s
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={0}
@@ -13583,7 +13493,6 @@ exports[`Reduced Pagination (reduced=true) offset: 990, limit: 10, total: 1000 s
             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
             "userSelect": "none",
             "verticalAlign": null,
-            "zIndex": 1,
           }
         }
         tabIndex={-1}

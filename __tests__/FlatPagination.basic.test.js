@@ -2,11 +2,14 @@
 
 import React from 'react';
 import ReactTestUtils from 'react-dom/test-utils';
-import {mount} from 'enzyme';
+import {configure, mount} from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 import {mountToJson} from 'enzyme-to-json';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import FlatPagination from '../src/FlatPagination';
+
+configure({adapter: new Adapter()});
 
 describe('Basic Pagination (reduced=false)', () => {
   const wrapper = (commonProps, otherProps) => {
@@ -58,7 +61,7 @@ describe('Basic Pagination (reduced=false)', () => {
 
         for (let i = 0; i < buttonCount; i++) {
           it(`buttons[${i}] not toBeCalled`, () => {
-            ReactTestUtils.Simulate[simulateName](buttons.at(i).node);
+            ReactTestUtils.Simulate[simulateName](buttons.at(i).instance());
             expect(fnMock).not.toBeCalled();
           });
         }
@@ -102,17 +105,17 @@ describe('Basic Pagination (reduced=false)', () => {
         for (let i = 0; i < buttonCount; i++) {
           if (i <= 1) {
             it(`buttons[${i}] not toBeCalled`, () => {
-              ReactTestUtils.Simulate[simulateName](buttons.at(i).node);
+              ReactTestUtils.Simulate[simulateName](buttons.at(i).instance());
               expect(fnMock).not.toBeCalled();
             });
           } else {
             it(`buttons[${i}] toBeCalled`, () => {
-              ReactTestUtils.Simulate[simulateName](buttons.at(i).node);
+              ReactTestUtils.Simulate[simulateName](buttons.at(i).instance());
               expect(fnMock).toBeCalled();
             });
 
             it(`buttons[${i}] toBeCalledWith(e: Object, offset: 10)`, () => {
-              ReactTestUtils.Simulate[simulateName](buttons.at(i).node);
+              ReactTestUtils.Simulate[simulateName](buttons.at(i).instance());
               expect(fnMock).toBeCalledWith(anyObj, 10);
             });
           }
@@ -157,17 +160,17 @@ describe('Basic Pagination (reduced=false)', () => {
         for (let i = 0; i < buttonCount; i++) {
           if (i <= 1) {
             it(`buttons[${i}] toBeCalled`, () => {
-              ReactTestUtils.Simulate[simulateName](buttons.at(i).node);
+              ReactTestUtils.Simulate[simulateName](buttons.at(i).instance());
               expect(fnMock).toBeCalled();
             });
 
             it(`buttons[${i}] toBeCalledWith(e: Object, offset: 0)`, () => {
-              ReactTestUtils.Simulate[simulateName](buttons.at(i).node);
+              ReactTestUtils.Simulate[simulateName](buttons.at(i).instance());
               expect(fnMock).toBeCalledWith(anyObj, 0);
             });
           } else {
             it(`buttons[${i}] not toBeCalled`, () => {
-              ReactTestUtils.Simulate[simulateName](buttons.at(i).node);
+              ReactTestUtils.Simulate[simulateName](buttons.at(i).instance());
               expect(fnMock).not.toBeCalled();
             });
           }
@@ -212,25 +215,25 @@ describe('Basic Pagination (reduced=false)', () => {
         for (let i = 0; i < buttonCount; i++) {
           if (i <= 1 || i === 6) {
             it(`buttons[${i}] not toBeCalled`, () => {
-              ReactTestUtils.Simulate[simulateName](buttons.at(i).node);
+              ReactTestUtils.Simulate[simulateName](buttons.at(i).instance());
               expect(fnMock).not.toBeCalled();
             });
           } else {
             it(`buttons[${i}] toBeCalled`, () => {
-              ReactTestUtils.Simulate[simulateName](buttons.at(i).node);
+              ReactTestUtils.Simulate[simulateName](buttons.at(i).instance());
               expect(fnMock).toBeCalled();
             });
 
             const offset = (() => {
-                if (i === 7 || i === 8) {
-                  return i + 1;
-                } else if (i === 9) {
-                  return 1;
-                }
-                return i - 1;
-              })() * 10;
+              if (i === 7 || i === 8) {
+                return i + 1;
+              } else if (i === 9) {
+                return 1;
+              }
+              return i - 1;
+            })() * 10;
             it(`buttons[${i}] toBeCalledWith(e: Object, offset: ${offset})`, () => {
-              ReactTestUtils.Simulate[simulateName](buttons.at(i).node);
+              ReactTestUtils.Simulate[simulateName](buttons.at(i).instance());
               expect(fnMock).toBeCalledWith(anyObj, offset);
             });
           }
@@ -275,25 +278,25 @@ describe('Basic Pagination (reduced=false)', () => {
         for (let i = 0; i < buttonCount; i++) {
           if (i === 5) {
             it(`buttons[${i}] not toBeCalled`, () => {
-              ReactTestUtils.Simulate[simulateName](buttons.at(i).node);
+              ReactTestUtils.Simulate[simulateName](buttons.at(i).instance());
               expect(fnMock).not.toBeCalled();
             });
           } else {
             it(`buttons[${i}] toBeCalled`, () => {
-              ReactTestUtils.Simulate[simulateName](buttons.at(i).node);
+              ReactTestUtils.Simulate[simulateName](buttons.at(i).instance());
               expect(fnMock).toBeCalled();
             });
 
             const offset = (() => {
-                if (i === 0) {
-                  return 3;
-                } else if (i === 11) {
-                  return 5;
-                }
-                return i - 1;
-              })() * 10;
+              if (i === 0) {
+                return 3;
+              } else if (i === 11) {
+                return 5;
+              }
+              return i - 1;
+            })() * 10;
             it(`buttons[${i}] toBeCalledWith(e: Object, offset: ${offset})`, () => {
-              ReactTestUtils.Simulate[simulateName](buttons.at(i).node);
+              ReactTestUtils.Simulate[simulateName](buttons.at(i).instance());
               expect(fnMock).toBeCalledWith(anyObj, offset);
             });
           }
@@ -338,25 +341,25 @@ describe('Basic Pagination (reduced=false)', () => {
         for (let i = 0; i < buttonCount; i++) {
           if (i === 6) {
             it(`buttons[${i}] not toBeCalled`, () => {
-              ReactTestUtils.Simulate[simulateName](buttons.at(i).node);
+              ReactTestUtils.Simulate[simulateName](buttons.at(i).instance());
               expect(fnMock).not.toBeCalled();
             });
           } else {
             it(`buttons[${i}] toBeCalled`, () => {
-              ReactTestUtils.Simulate[simulateName](buttons.at(i).node);
+              ReactTestUtils.Simulate[simulateName](buttons.at(i).instance());
               expect(fnMock).toBeCalled();
             });
 
             const offset = (() => {
-                if (i === 0) {
-                  return 4;
-                } else if (i === 11) {
-                  return 6;
-                }
-                return i - 1;
-              })() * 10;
+              if (i === 0) {
+                return 4;
+              } else if (i === 11) {
+                return 6;
+              }
+              return i - 1;
+            })() * 10;
             it(`buttons[${i}] toBeCalledWith(e: Object, offset: ${offset})`, () => {
-              ReactTestUtils.Simulate[simulateName](buttons.at(i).node);
+              ReactTestUtils.Simulate[simulateName](buttons.at(i).instance());
               expect(fnMock).toBeCalledWith(anyObj, offset);
             });
           }
@@ -401,25 +404,25 @@ describe('Basic Pagination (reduced=false)', () => {
         for (let i = 0; i < buttonCount; i++) {
           if (i === 3 || i >= 8) {
             it(`buttons[${i}] not toBeCalled`, () => {
-              ReactTestUtils.Simulate[simulateName](buttons.at(i).node);
+              ReactTestUtils.Simulate[simulateName](buttons.at(i).instance());
               expect(fnMock).not.toBeCalled();
             });
           } else {
             it(`buttons[${i}] toBeCalled`, () => {
-              ReactTestUtils.Simulate[simulateName](buttons.at(i).node);
+              ReactTestUtils.Simulate[simulateName](buttons.at(i).instance());
               expect(fnMock).toBeCalled();
             });
 
             const offset = (() => {
-                if (i === 0) {
-                  return 8;
-                } else if (i === 1 || i === 2) {
-                  return i - 1;
-                }
-                return i + 1;
-              })() * 10;
+              if (i === 0) {
+                return 8;
+              } else if (i === 1 || i === 2) {
+                return i - 1;
+              }
+              return i + 1;
+            })() * 10;
             it(`buttons[${i}] toBeCalledWith(e: Object, offset: ${offset})`, () => {
-              ReactTestUtils.Simulate[simulateName](buttons.at(i).node);
+              ReactTestUtils.Simulate[simulateName](buttons.at(i).instance());
               expect(fnMock).toBeCalledWith(anyObj, offset);
             });
           }
@@ -464,25 +467,25 @@ describe('Basic Pagination (reduced=false)', () => {
         for (let i = 0; i < buttonCount; i++) {
           if (i <= 1 || i === 6) {
             it(`buttons[${i}] not toBeCalled`, () => {
-              ReactTestUtils.Simulate[simulateName](buttons.at(i).node);
+              ReactTestUtils.Simulate[simulateName](buttons.at(i).instance());
               expect(fnMock).not.toBeCalled();
             });
           } else {
             it(`buttons[${i}] toBeCalled`, () => {
-              ReactTestUtils.Simulate[simulateName](buttons.at(i).node);
+              ReactTestUtils.Simulate[simulateName](buttons.at(i).instance());
               expect(fnMock).toBeCalled();
             });
 
             const offset = (() => {
-                if (i === 7 || i === 8) {
-                  return 90 + i + 1;
-                } else if (i === 9) {
-                  return 1;
-                }
-                return i - 1;
-              })() * 10;
+              if (i === 7 || i === 8) {
+                return 90 + i + 1;
+              } else if (i === 9) {
+                return 1;
+              }
+              return i - 1;
+            })() * 10;
             it(`buttons[${i}] toBeCalledWith(e: Object, offset: ${offset})`, () => {
-              ReactTestUtils.Simulate[simulateName](buttons.at(i).node);
+              ReactTestUtils.Simulate[simulateName](buttons.at(i).instance());
               expect(fnMock).toBeCalledWith(anyObj, offset);
             });
           }
@@ -527,27 +530,27 @@ describe('Basic Pagination (reduced=false)', () => {
         for (let i = 0; i < buttonCount; i++) {
           if (i === 6 || i === 9) {
             it(`buttons[${i}] not toBeCalled`, () => {
-              ReactTestUtils.Simulate[simulateName](buttons.at(i).node);
+              ReactTestUtils.Simulate[simulateName](buttons.at(i).instance());
               expect(fnMock).not.toBeCalled();
             });
           } else {
             it(`buttons[${i}] toBeCalled`, () => {
-              ReactTestUtils.Simulate[simulateName](buttons.at(i).node);
+              ReactTestUtils.Simulate[simulateName](buttons.at(i).instance());
               expect(fnMock).toBeCalled();
             });
 
             const offset = (() => {
-                if (i === 0) {
-                  return 4;
-                } else if (i === 10 || i === 11) {
-                  return 90 + i - 2;
-                } else if (i === 12) {
-                  return 6;
-                }
-                return i - 1;
-              })() * 10;
+              if (i === 0) {
+                return 4;
+              } else if (i === 10 || i === 11) {
+                return 90 + i - 2;
+              } else if (i === 12) {
+                return 6;
+              }
+              return i - 1;
+            })() * 10;
             it(`buttons[${i}] toBeCalledWith(e: Object, offset: ${offset})`, () => {
-              ReactTestUtils.Simulate[simulateName](buttons.at(i).node);
+              ReactTestUtils.Simulate[simulateName](buttons.at(i).instance());
               expect(fnMock).toBeCalledWith(anyObj, offset);
             });
           }
@@ -592,29 +595,29 @@ describe('Basic Pagination (reduced=false)', () => {
         for (let i = 0; i < buttonCount; i++) {
           if (i === 3 || i === 6 || i === 9) {
             it(`buttons[${i}] not toBeCalled`, () => {
-              ReactTestUtils.Simulate[simulateName](buttons.at(i).node);
+              ReactTestUtils.Simulate[simulateName](buttons.at(i).instance());
               expect(fnMock).not.toBeCalled();
             });
           } else {
             it(`buttons[${i}] toBeCalled`, () => {
-              ReactTestUtils.Simulate[simulateName](buttons.at(i).node);
+              ReactTestUtils.Simulate[simulateName](buttons.at(i).instance());
               expect(fnMock).toBeCalled();
             });
 
             const offset = (() => {
-                if (i === 0) {
-                  return 5;
-                } else if (i === 1 || i === 2) {
-                  return i - 1;
-                } else if (i === 10 || i === 11) {
-                  return 90 + i - 2;
-                } else if (i === 12) {
-                  return 7;
-                }
-                return i;
-              })() * 10;
+              if (i === 0) {
+                return 5;
+              } else if (i === 1 || i === 2) {
+                return i - 1;
+              } else if (i === 10 || i === 11) {
+                return 90 + i - 2;
+              } else if (i === 12) {
+                return 7;
+              }
+              return i;
+            })() * 10;
             it(`buttons[${i}] toBeCalledWith(e: Object, offset: ${offset})`, () => {
-              ReactTestUtils.Simulate[simulateName](buttons.at(i).node);
+              ReactTestUtils.Simulate[simulateName](buttons.at(i).instance());
               expect(fnMock).toBeCalledWith(anyObj, offset);
             });
           }
@@ -659,29 +662,29 @@ describe('Basic Pagination (reduced=false)', () => {
         for (let i = 0; i < buttonCount; i++) {
           if (i === 3 || i === 6 || i === 9) {
             it(`buttons[${i}] not toBeCalled`, () => {
-              ReactTestUtils.Simulate[simulateName](buttons.at(i).node);
+              ReactTestUtils.Simulate[simulateName](buttons.at(i).instance());
               expect(fnMock).not.toBeCalled();
             });
           } else {
             it(`buttons[${i}] toBeCalled`, () => {
-              ReactTestUtils.Simulate[simulateName](buttons.at(i).node);
+              ReactTestUtils.Simulate[simulateName](buttons.at(i).instance());
               expect(fnMock).toBeCalled();
             });
 
             const offset = (() => {
-                if (i === 0) {
-                  return 92;
-                } else if (i === 1 || i === 2) {
-                  return i - 1;
-                } else if (i === 10 || i === 11) {
-                  return 90 + i - 2;
-                } else if (i === 12) {
-                  return 94;
-                }
-                return 90 + i - 3;
-              })() * 10;
+              if (i === 0) {
+                return 92;
+              } else if (i === 1 || i === 2) {
+                return i - 1;
+              } else if (i === 10 || i === 11) {
+                return 90 + i - 2;
+              } else if (i === 12) {
+                return 94;
+              }
+              return 90 + i - 3;
+            })() * 10;
             it(`buttons[${i}] toBeCalledWith(e: Object, offset: ${offset})`, () => {
-              ReactTestUtils.Simulate[simulateName](buttons.at(i).node);
+              ReactTestUtils.Simulate[simulateName](buttons.at(i).instance());
               expect(fnMock).toBeCalledWith(anyObj, offset);
             });
           }
@@ -726,27 +729,27 @@ describe('Basic Pagination (reduced=false)', () => {
         for (let i = 0; i < buttonCount; i++) {
           if (i === 3 || i === 6) {
             it(`buttons[${i}] not toBeCalled`, () => {
-              ReactTestUtils.Simulate[simulateName](buttons.at(i).node);
+              ReactTestUtils.Simulate[simulateName](buttons.at(i).instance());
               expect(fnMock).not.toBeCalled();
             });
           } else {
             it(`buttons[${i}] toBeCalled`, () => {
-              ReactTestUtils.Simulate[simulateName](buttons.at(i).node);
+              ReactTestUtils.Simulate[simulateName](buttons.at(i).instance());
               expect(fnMock).toBeCalled();
             });
 
             const offset = (() => {
-                if (i === 0) {
-                  return 93;
-                } else if (i === 1 || i === 2) {
-                  return i - 1;
-                } else if (i === 12) {
-                  return 95;
-                }
-                return 90 + i - 2;
-              })() * 10;
+              if (i === 0) {
+                return 93;
+              } else if (i === 1 || i === 2) {
+                return i - 1;
+              } else if (i === 12) {
+                return 95;
+              }
+              return 90 + i - 2;
+            })() * 10;
             it(`buttons[${i}] toBeCalledWith(e: Object, offset: ${offset})`, () => {
-              ReactTestUtils.Simulate[simulateName](buttons.at(i).node);
+              ReactTestUtils.Simulate[simulateName](buttons.at(i).instance());
               expect(fnMock).toBeCalledWith(anyObj, offset);
             });
           }
@@ -791,25 +794,25 @@ describe('Basic Pagination (reduced=false)', () => {
         for (let i = 0; i < buttonCount; i++) {
           if (i === 3 || i >= 8) {
             it(`buttons[${i}] not toBeCalled`, () => {
-              ReactTestUtils.Simulate[simulateName](buttons.at(i).node);
+              ReactTestUtils.Simulate[simulateName](buttons.at(i).instance());
               expect(fnMock).not.toBeCalled();
             });
           } else {
             it(`buttons[${i}] toBeCalled`, () => {
-              ReactTestUtils.Simulate[simulateName](buttons.at(i).node);
+              ReactTestUtils.Simulate[simulateName](buttons.at(i).instance());
               expect(fnMock).toBeCalled();
             });
 
             const offset = (() => {
-                if (i === 0) {
-                  return 98;
-                } else if (i === 1 || i === 2) {
-                  return i - 1;
-                }
-                return 90 + i + 1;
-              })() * 10;
+              if (i === 0) {
+                return 98;
+              } else if (i === 1 || i === 2) {
+                return i - 1;
+              }
+              return 90 + i + 1;
+            })() * 10;
             it(`buttons[${i}] toBeCalledWith(e: Object, offset: ${offset})`, () => {
-              ReactTestUtils.Simulate[simulateName](buttons.at(i).node);
+              ReactTestUtils.Simulate[simulateName](buttons.at(i).instance());
               expect(fnMock).toBeCalledWith(anyObj, offset);
             });
           }

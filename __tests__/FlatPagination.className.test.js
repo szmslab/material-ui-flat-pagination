@@ -1,10 +1,13 @@
 'use strict';
 
 import React from 'react';
-import {mount} from 'enzyme';
+import {configure, mount} from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import FlatPagination from '../src/FlatPagination';
+
+configure({adapter: new Adapter()});
 
 describe('Pagination Class Name', () => {
   const wrapper = (commonProps, otherProps) => {

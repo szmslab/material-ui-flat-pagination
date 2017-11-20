@@ -1,13 +1,16 @@
 'use strict';
 
 import React from 'react';
-import {mount} from 'enzyme';
+import {configure, mount} from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 import {mountToJson} from 'enzyme-to-json';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import FlatPagination from '../src/FlatPagination';
 import NavigationArrowBack from 'material-ui/svg-icons/navigation/arrow-back';
 import NavigationArrowForward from 'material-ui/svg-icons/navigation/arrow-forward';
+
+configure({adapter: new Adapter()});
 
 describe('Pagination Label', () => {
   const wrapper = (commonProps, otherProps) => {
