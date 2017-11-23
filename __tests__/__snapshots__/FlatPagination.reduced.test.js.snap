@@ -8,7 +8,7 @@ exports[`Reduced Pagination (reduced=true) offset: 0, limit: 10, total: 10 snaps
     disableTouchRipple={false}
     disabled={true}
     fullWidth={false}
-    key="previous"
+    key="pr"
     label="<"
     labelPosition="after"
     labelStyle={
@@ -146,7 +146,7 @@ exports[`Reduced Pagination (reduced=true) offset: 0, limit: 10, total: 10 snaps
     disableTouchRipple={true}
     disabled={false}
     fullWidth={false}
-    key="1"
+    key="cr1"
     label="1"
     labelPosition="after"
     labelStyle={
@@ -283,7 +283,7 @@ exports[`Reduced Pagination (reduced=true) offset: 0, limit: 10, total: 10 snaps
     disableTouchRipple={false}
     disabled={true}
     fullWidth={false}
-    key="next"
+    key="nx"
     label=">"
     labelPosition="after"
     labelStyle={
@@ -428,7 +428,7 @@ exports[`Reduced Pagination (reduced=true) offset: 0, limit: 10, total: 11 snaps
     disableTouchRipple={false}
     disabled={true}
     fullWidth={false}
-    key="previous"
+    key="pr"
     label="<"
     labelPosition="after"
     labelStyle={
@@ -566,7 +566,7 @@ exports[`Reduced Pagination (reduced=true) offset: 0, limit: 10, total: 11 snaps
     disableTouchRipple={true}
     disabled={false}
     fullWidth={false}
-    key="1"
+    key="cr1"
     label="1"
     labelPosition="after"
     labelStyle={
@@ -856,7 +856,7 @@ exports[`Reduced Pagination (reduced=true) offset: 0, limit: 10, total: 11 snaps
     disableTouchRipple={false}
     disabled={false}
     fullWidth={false}
-    key="next"
+    key="nx"
     label=">"
     labelPosition="after"
     labelStyle={
@@ -1016,7 +1016,7 @@ exports[`Reduced Pagination (reduced=true) offset: 0, limit: 10, total: 60 snaps
     disableTouchRipple={false}
     disabled={true}
     fullWidth={false}
-    key="previous"
+    key="pr"
     label="<"
     labelPosition="after"
     labelStyle={
@@ -1154,7 +1154,7 @@ exports[`Reduced Pagination (reduced=true) offset: 0, limit: 10, total: 60 snaps
     disableTouchRipple={true}
     disabled={false}
     fullWidth={false}
-    key="1"
+    key="cr1"
     label="1"
     labelPosition="after"
     labelStyle={
@@ -1594,10 +1594,9 @@ exports[`Reduced Pagination (reduced=true) offset: 0, limit: 10, total: 60 snaps
     </EnhancedButton>
   </FlatButton>
   <FlatButton
-    disableTouchRipple={false}
     disabled={true}
     fullWidth={false}
-    key="rightEllipsis"
+    key="re"
     label="..."
     labelPosition="after"
     labelStyle={
@@ -1605,7 +1604,6 @@ exports[`Reduced Pagination (reduced=true) offset: 0, limit: 10, total: 60 snaps
         "padding": "0 4px",
       }
     }
-    onClick={[Function]}
     onKeyboardFocus={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
@@ -1620,7 +1618,6 @@ exports[`Reduced Pagination (reduced=true) offset: 0, limit: 10, total: 60 snaps
   >
     <EnhancedButton
       containerElement="button"
-      disableTouchRipple={false}
       disabled={true}
       focusRippleColor="#999999"
       focusRippleOpacity={0.3}
@@ -1888,7 +1885,7 @@ exports[`Reduced Pagination (reduced=true) offset: 0, limit: 10, total: 60 snaps
     disableTouchRipple={false}
     disabled={false}
     fullWidth={false}
-    key="next"
+    key="nx"
     label=">"
     labelPosition="after"
     labelStyle={
@@ -2048,7 +2045,7 @@ exports[`Reduced Pagination (reduced=true) offset: 0, limit: 10, total: 1000 sna
     disableTouchRipple={false}
     disabled={true}
     fullWidth={false}
-    key="previous"
+    key="pr"
     label="<"
     labelPosition="after"
     labelStyle={
@@ -2186,7 +2183,7 @@ exports[`Reduced Pagination (reduced=true) offset: 0, limit: 10, total: 1000 sna
     disableTouchRipple={true}
     disabled={false}
     fullWidth={false}
-    key="1"
+    key="cr1"
     label="1"
     labelPosition="after"
     labelStyle={
@@ -2626,10 +2623,9 @@ exports[`Reduced Pagination (reduced=true) offset: 0, limit: 10, total: 1000 sna
     </EnhancedButton>
   </FlatButton>
   <FlatButton
-    disableTouchRipple={false}
     disabled={true}
     fullWidth={false}
-    key="rightEllipsis"
+    key="re"
     label="..."
     labelPosition="after"
     labelStyle={
@@ -2637,7 +2633,6 @@ exports[`Reduced Pagination (reduced=true) offset: 0, limit: 10, total: 1000 sna
         "padding": "0 4px",
       }
     }
-    onClick={[Function]}
     onKeyboardFocus={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
@@ -2652,7 +2647,6 @@ exports[`Reduced Pagination (reduced=true) offset: 0, limit: 10, total: 1000 sna
   >
     <EnhancedButton
       containerElement="button"
-      disableTouchRipple={false}
       disabled={true}
       focusRippleColor="#999999"
       focusRippleOpacity={0.3}
@@ -2920,7 +2914,7 @@ exports[`Reduced Pagination (reduced=true) offset: 0, limit: 10, total: 1000 sna
     disableTouchRipple={false}
     disabled={false}
     fullWidth={false}
-    key="next"
+    key="nx"
     label=">"
     labelPosition="after"
     labelStyle={
@@ -3080,7 +3074,7 @@ exports[`Reduced Pagination (reduced=true) offset: 10, limit: 10, total: 11 snap
     disableTouchRipple={false}
     disabled={false}
     fullWidth={false}
-    key="previous"
+    key="pr"
     label="<"
     labelPosition="after"
     labelStyle={
@@ -3386,7 +3380,7 @@ exports[`Reduced Pagination (reduced=true) offset: 10, limit: 10, total: 11 snap
     disableTouchRipple={true}
     disabled={false}
     fullWidth={false}
-    key="2"
+    key="cr2"
     label="2"
     labelPosition="after"
     labelStyle={
@@ -3523,7 +3517,7 @@ exports[`Reduced Pagination (reduced=true) offset: 10, limit: 10, total: 11 snap
     disableTouchRipple={false}
     disabled={true}
     fullWidth={false}
-    key="next"
+    key="nx"
     label=">"
     labelPosition="after"
     labelStyle={
@@ -3668,7 +3662,7 @@ exports[`Reduced Pagination (reduced=true) offset: 20, limit: 10, total: 60 snap
     disableTouchRipple={false}
     disabled={false}
     fullWidth={false}
-    key="previous"
+    key="pr"
     label="<"
     labelPosition="after"
     labelStyle={
@@ -4127,7 +4121,7 @@ exports[`Reduced Pagination (reduced=true) offset: 20, limit: 10, total: 60 snap
     disableTouchRipple={true}
     disabled={false}
     fullWidth={false}
-    key="3"
+    key="cr3"
     label="3"
     labelPosition="after"
     labelStyle={
@@ -4723,7 +4717,7 @@ exports[`Reduced Pagination (reduced=true) offset: 20, limit: 10, total: 60 snap
     disableTouchRipple={false}
     disabled={false}
     fullWidth={false}
-    key="next"
+    key="nx"
     label=">"
     labelPosition="after"
     labelStyle={
@@ -4883,7 +4877,7 @@ exports[`Reduced Pagination (reduced=true) offset: 30, limit: 10, total: 60 snap
     disableTouchRipple={false}
     disabled={false}
     fullWidth={false}
-    key="previous"
+    key="pr"
     label="<"
     labelPosition="after"
     labelStyle={
@@ -5495,7 +5489,7 @@ exports[`Reduced Pagination (reduced=true) offset: 30, limit: 10, total: 60 snap
     disableTouchRipple={true}
     disabled={false}
     fullWidth={false}
-    key="4"
+    key="cr4"
     label="4"
     labelPosition="after"
     labelStyle={
@@ -5938,7 +5932,7 @@ exports[`Reduced Pagination (reduced=true) offset: 30, limit: 10, total: 60 snap
     disableTouchRipple={false}
     disabled={false}
     fullWidth={false}
-    key="next"
+    key="nx"
     label=">"
     labelPosition="after"
     labelStyle={
@@ -6098,7 +6092,7 @@ exports[`Reduced Pagination (reduced=true) offset: 30, limit: 10, total: 1000 sn
     disableTouchRipple={false}
     disabled={false}
     fullWidth={false}
-    key="previous"
+    key="pr"
     label="<"
     labelPosition="after"
     labelStyle={
@@ -6710,7 +6704,7 @@ exports[`Reduced Pagination (reduced=true) offset: 30, limit: 10, total: 1000 sn
     disableTouchRipple={true}
     disabled={false}
     fullWidth={false}
-    key="4"
+    key="cr4"
     label="4"
     labelPosition="after"
     labelStyle={
@@ -6997,10 +6991,9 @@ exports[`Reduced Pagination (reduced=true) offset: 30, limit: 10, total: 1000 sn
     </EnhancedButton>
   </FlatButton>
   <FlatButton
-    disableTouchRipple={false}
     disabled={true}
     fullWidth={false}
-    key="rightEllipsis"
+    key="re"
     label="..."
     labelPosition="after"
     labelStyle={
@@ -7008,7 +7001,6 @@ exports[`Reduced Pagination (reduced=true) offset: 30, limit: 10, total: 1000 sn
         "padding": "0 4px",
       }
     }
-    onClick={[Function]}
     onKeyboardFocus={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
@@ -7023,7 +7015,6 @@ exports[`Reduced Pagination (reduced=true) offset: 30, limit: 10, total: 1000 sn
   >
     <EnhancedButton
       containerElement="button"
-      disableTouchRipple={false}
       disabled={true}
       focusRippleColor="#999999"
       focusRippleOpacity={0.3}
@@ -7291,7 +7282,7 @@ exports[`Reduced Pagination (reduced=true) offset: 30, limit: 10, total: 1000 sn
     disableTouchRipple={false}
     disabled={false}
     fullWidth={false}
-    key="next"
+    key="nx"
     label=">"
     labelPosition="after"
     labelStyle={
@@ -7451,7 +7442,7 @@ exports[`Reduced Pagination (reduced=true) offset: 40, limit: 10, total: 1000 sn
     disableTouchRipple={false}
     disabled={false}
     fullWidth={false}
-    key="previous"
+    key="pr"
     label="<"
     labelPosition="after"
     labelStyle={
@@ -7754,10 +7745,9 @@ exports[`Reduced Pagination (reduced=true) offset: 40, limit: 10, total: 1000 sn
     </EnhancedButton>
   </FlatButton>
   <FlatButton
-    disableTouchRipple={false}
     disabled={true}
     fullWidth={false}
-    key="leftEllipsis"
+    key="le"
     label="..."
     labelPosition="after"
     labelStyle={
@@ -7765,7 +7755,6 @@ exports[`Reduced Pagination (reduced=true) offset: 40, limit: 10, total: 1000 sn
         "padding": "0 4px",
       }
     }
-    onClick={[Function]}
     onKeyboardFocus={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
@@ -7780,7 +7769,6 @@ exports[`Reduced Pagination (reduced=true) offset: 40, limit: 10, total: 1000 sn
   >
     <EnhancedButton
       containerElement="button"
-      disableTouchRipple={false}
       disabled={true}
       focusRippleColor="#999999"
       focusRippleOpacity={0.3}
@@ -8048,7 +8036,7 @@ exports[`Reduced Pagination (reduced=true) offset: 40, limit: 10, total: 1000 sn
     disableTouchRipple={true}
     disabled={false}
     fullWidth={false}
-    key="5"
+    key="cr5"
     label="5"
     labelPosition="after"
     labelStyle={
@@ -8335,10 +8323,9 @@ exports[`Reduced Pagination (reduced=true) offset: 40, limit: 10, total: 1000 sn
     </EnhancedButton>
   </FlatButton>
   <FlatButton
-    disableTouchRipple={false}
     disabled={true}
     fullWidth={false}
-    key="rightEllipsis"
+    key="re"
     label="..."
     labelPosition="after"
     labelStyle={
@@ -8346,7 +8333,6 @@ exports[`Reduced Pagination (reduced=true) offset: 40, limit: 10, total: 1000 sn
         "padding": "0 4px",
       }
     }
-    onClick={[Function]}
     onKeyboardFocus={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
@@ -8361,7 +8347,6 @@ exports[`Reduced Pagination (reduced=true) offset: 40, limit: 10, total: 1000 sn
   >
     <EnhancedButton
       containerElement="button"
-      disableTouchRipple={false}
       disabled={true}
       focusRippleColor="#999999"
       focusRippleOpacity={0.3}
@@ -8629,7 +8614,7 @@ exports[`Reduced Pagination (reduced=true) offset: 40, limit: 10, total: 1000 sn
     disableTouchRipple={false}
     disabled={false}
     fullWidth={false}
-    key="next"
+    key="nx"
     label=">"
     labelPosition="after"
     labelStyle={
@@ -8789,7 +8774,7 @@ exports[`Reduced Pagination (reduced=true) offset: 50, limit: 10, total: 60 snap
     disableTouchRipple={false}
     disabled={false}
     fullWidth={false}
-    key="previous"
+    key="pr"
     label="<"
     labelPosition="after"
     labelStyle={
@@ -9092,10 +9077,9 @@ exports[`Reduced Pagination (reduced=true) offset: 50, limit: 10, total: 60 snap
     </EnhancedButton>
   </FlatButton>
   <FlatButton
-    disableTouchRipple={false}
     disabled={true}
     fullWidth={false}
-    key="leftEllipsis"
+    key="le"
     label="..."
     labelPosition="after"
     labelStyle={
@@ -9103,7 +9087,6 @@ exports[`Reduced Pagination (reduced=true) offset: 50, limit: 10, total: 60 snap
         "padding": "0 4px",
       }
     }
-    onClick={[Function]}
     onKeyboardFocus={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
@@ -9118,7 +9101,6 @@ exports[`Reduced Pagination (reduced=true) offset: 50, limit: 10, total: 60 snap
   >
     <EnhancedButton
       containerElement="button"
-      disableTouchRipple={false}
       disabled={true}
       focusRippleColor="#999999"
       focusRippleOpacity={0.3}
@@ -9539,7 +9521,7 @@ exports[`Reduced Pagination (reduced=true) offset: 50, limit: 10, total: 60 snap
     disableTouchRipple={true}
     disabled={false}
     fullWidth={false}
-    key="6"
+    key="cr6"
     label="6"
     labelPosition="after"
     labelStyle={
@@ -9676,7 +9658,7 @@ exports[`Reduced Pagination (reduced=true) offset: 50, limit: 10, total: 60 snap
     disableTouchRipple={false}
     disabled={true}
     fullWidth={false}
-    key="next"
+    key="nx"
     label=">"
     labelPosition="after"
     labelStyle={
@@ -9821,7 +9803,7 @@ exports[`Reduced Pagination (reduced=true) offset: 950, limit: 10, total: 1000 s
     disableTouchRipple={false}
     disabled={false}
     fullWidth={false}
-    key="previous"
+    key="pr"
     label="<"
     labelPosition="after"
     labelStyle={
@@ -10124,10 +10106,9 @@ exports[`Reduced Pagination (reduced=true) offset: 950, limit: 10, total: 1000 s
     </EnhancedButton>
   </FlatButton>
   <FlatButton
-    disableTouchRipple={false}
     disabled={true}
     fullWidth={false}
-    key="leftEllipsis"
+    key="le"
     label="..."
     labelPosition="after"
     labelStyle={
@@ -10135,7 +10116,6 @@ exports[`Reduced Pagination (reduced=true) offset: 950, limit: 10, total: 1000 s
         "padding": "0 4px",
       }
     }
-    onClick={[Function]}
     onKeyboardFocus={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
@@ -10150,7 +10130,6 @@ exports[`Reduced Pagination (reduced=true) offset: 950, limit: 10, total: 1000 s
   >
     <EnhancedButton
       containerElement="button"
-      disableTouchRipple={false}
       disabled={true}
       focusRippleColor="#999999"
       focusRippleOpacity={0.3}
@@ -10418,7 +10397,7 @@ exports[`Reduced Pagination (reduced=true) offset: 950, limit: 10, total: 1000 s
     disableTouchRipple={true}
     disabled={false}
     fullWidth={false}
-    key="96"
+    key="cr96"
     label="96"
     labelPosition="after"
     labelStyle={
@@ -10705,10 +10684,9 @@ exports[`Reduced Pagination (reduced=true) offset: 950, limit: 10, total: 1000 s
     </EnhancedButton>
   </FlatButton>
   <FlatButton
-    disableTouchRipple={false}
     disabled={true}
     fullWidth={false}
-    key="rightEllipsis"
+    key="re"
     label="..."
     labelPosition="after"
     labelStyle={
@@ -10716,7 +10694,6 @@ exports[`Reduced Pagination (reduced=true) offset: 950, limit: 10, total: 1000 s
         "padding": "0 4px",
       }
     }
-    onClick={[Function]}
     onKeyboardFocus={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
@@ -10731,7 +10708,6 @@ exports[`Reduced Pagination (reduced=true) offset: 950, limit: 10, total: 1000 s
   >
     <EnhancedButton
       containerElement="button"
-      disableTouchRipple={false}
       disabled={true}
       focusRippleColor="#999999"
       focusRippleOpacity={0.3}
@@ -10999,7 +10975,7 @@ exports[`Reduced Pagination (reduced=true) offset: 950, limit: 10, total: 1000 s
     disableTouchRipple={false}
     disabled={false}
     fullWidth={false}
-    key="next"
+    key="nx"
     label=">"
     labelPosition="after"
     labelStyle={
@@ -11159,7 +11135,7 @@ exports[`Reduced Pagination (reduced=true) offset: 960, limit: 10, total: 1000 s
     disableTouchRipple={false}
     disabled={false}
     fullWidth={false}
-    key="previous"
+    key="pr"
     label="<"
     labelPosition="after"
     labelStyle={
@@ -11462,10 +11438,9 @@ exports[`Reduced Pagination (reduced=true) offset: 960, limit: 10, total: 1000 s
     </EnhancedButton>
   </FlatButton>
   <FlatButton
-    disableTouchRipple={false}
     disabled={true}
     fullWidth={false}
-    key="leftEllipsis"
+    key="le"
     label="..."
     labelPosition="after"
     labelStyle={
@@ -11473,7 +11448,6 @@ exports[`Reduced Pagination (reduced=true) offset: 960, limit: 10, total: 1000 s
         "padding": "0 4px",
       }
     }
-    onClick={[Function]}
     onKeyboardFocus={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
@@ -11488,7 +11462,6 @@ exports[`Reduced Pagination (reduced=true) offset: 960, limit: 10, total: 1000 s
   >
     <EnhancedButton
       containerElement="button"
-      disableTouchRipple={false}
       disabled={true}
       focusRippleColor="#999999"
       focusRippleOpacity={0.3}
@@ -11756,7 +11729,7 @@ exports[`Reduced Pagination (reduced=true) offset: 960, limit: 10, total: 1000 s
     disableTouchRipple={true}
     disabled={false}
     fullWidth={false}
-    key="97"
+    key="cr97"
     label="97"
     labelPosition="after"
     labelStyle={
@@ -12352,7 +12325,7 @@ exports[`Reduced Pagination (reduced=true) offset: 960, limit: 10, total: 1000 s
     disableTouchRipple={false}
     disabled={false}
     fullWidth={false}
-    key="next"
+    key="nx"
     label=">"
     labelPosition="after"
     labelStyle={
@@ -12512,7 +12485,7 @@ exports[`Reduced Pagination (reduced=true) offset: 990, limit: 10, total: 1000 s
     disableTouchRipple={false}
     disabled={false}
     fullWidth={false}
-    key="previous"
+    key="pr"
     label="<"
     labelPosition="after"
     labelStyle={
@@ -12815,10 +12788,9 @@ exports[`Reduced Pagination (reduced=true) offset: 990, limit: 10, total: 1000 s
     </EnhancedButton>
   </FlatButton>
   <FlatButton
-    disableTouchRipple={false}
     disabled={true}
     fullWidth={false}
-    key="leftEllipsis"
+    key="le"
     label="..."
     labelPosition="after"
     labelStyle={
@@ -12826,7 +12798,6 @@ exports[`Reduced Pagination (reduced=true) offset: 990, limit: 10, total: 1000 s
         "padding": "0 4px",
       }
     }
-    onClick={[Function]}
     onKeyboardFocus={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
@@ -12841,7 +12812,6 @@ exports[`Reduced Pagination (reduced=true) offset: 990, limit: 10, total: 1000 s
   >
     <EnhancedButton
       containerElement="button"
-      disableTouchRipple={false}
       disabled={true}
       focusRippleColor="#999999"
       focusRippleOpacity={0.3}
@@ -13262,7 +13232,7 @@ exports[`Reduced Pagination (reduced=true) offset: 990, limit: 10, total: 1000 s
     disableTouchRipple={true}
     disabled={false}
     fullWidth={false}
-    key="100"
+    key="cr100"
     label="100"
     labelPosition="after"
     labelStyle={
@@ -13399,7 +13369,7 @@ exports[`Reduced Pagination (reduced=true) offset: 990, limit: 10, total: 1000 s
     disableTouchRipple={false}
     disabled={true}
     fullWidth={false}
-    key="next"
+    key="nx"
     label=">"
     labelPosition="after"
     labelStyle={

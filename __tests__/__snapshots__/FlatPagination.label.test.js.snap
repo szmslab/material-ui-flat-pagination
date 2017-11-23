@@ -8,7 +8,7 @@ exports[`Pagination Label nextPageLabel snapshot 1`] = `
     disableTouchRipple={false}
     disabled={true}
     fullWidth={false}
-    key="previous"
+    key="pr"
     label="<"
     labelPosition="after"
     labelStyle={
@@ -146,7 +146,7 @@ exports[`Pagination Label nextPageLabel snapshot 1`] = `
     disableTouchRipple={true}
     disabled={false}
     fullWidth={false}
-    key="1"
+    key="cr1"
     label="1"
     labelPosition="after"
     labelStyle={
@@ -292,13 +292,9 @@ exports[`Pagination Label nextPageLabel snapshot 1`] = `
         }
       />
     }
-    key="next"
+    key="nx"
     labelPosition="after"
-    labelStyle={
-      Object {
-        "padding": "0 12px",
-      }
-    }
+    labelStyle={Object {}}
     onClick={[Function]}
     onKeyboardFocus={[Function]}
     onMouseEnter={[Function]}
@@ -478,13 +474,9 @@ exports[`Pagination Label previousPageLabel snapshot 1`] = `
         }
       />
     }
-    key="previous"
+    key="pr"
     labelPosition="after"
-    labelStyle={
-      Object {
-        "padding": "0 12px",
-      }
-    }
+    labelStyle={Object {}}
     onClick={[Function]}
     onKeyboardFocus={[Function]}
     onMouseEnter={[Function]}
@@ -648,7 +640,7 @@ exports[`Pagination Label previousPageLabel snapshot 1`] = `
     disableTouchRipple={true}
     disabled={false}
     fullWidth={false}
-    key="1"
+    key="cr1"
     label="1"
     labelPosition="after"
     labelStyle={
@@ -785,7 +777,7 @@ exports[`Pagination Label previousPageLabel snapshot 1`] = `
     disableTouchRipple={false}
     disabled={true}
     fullWidth={false}
-    key="next"
+    key="nx"
     label=">"
     labelPosition="after"
     labelStyle={

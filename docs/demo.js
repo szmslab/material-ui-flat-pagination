@@ -9,8 +9,19 @@ import Paper from 'material-ui/Paper';
 import Toggle from 'material-ui/Toggle';
 import FlatPagination from '../src/FlatPagination';
 
-const _defaultTheme = getMuiTheme();
-const _darkTheme = getMuiTheme(darkBaseTheme);
+const defaultTheme = getMuiTheme();
+const darkTheme = getMuiTheme(darkBaseTheme);
+
+const styles = {
+  paperStyle: {
+    padding: '8px 8px 32px'
+  },
+  toggleStyle: {
+    width: 'auto',
+    marginTop: '32px',
+    paddingRight: '8px'
+  }
+};
 
 class Demo extends React.Component {
 
@@ -25,10 +36,10 @@ class Demo extends React.Component {
       limit: 10,
       total: 1000
     },
-    muiTheme: _defaultTheme
+    muiTheme: defaultTheme
   };
 
-  handleClick(offset, propName) {
+  handleClick = (propName) => (e, offset) => {
     setTimeout(() => {
       this.setState({
         [propName]: {
@@ -37,41 +48,39 @@ class Demo extends React.Component {
         }
       });
     }, 240);
-  }
+  };
 
-  handleChangeTheme(isInputChecked) {
+  handleToggleTheme = (e, isInputChecked) => {
     this.setState({
-      muiTheme: isInputChecked ? _darkTheme : _defaultTheme
+      muiTheme: isInputChecked ? darkTheme : defaultTheme
     });
-  }
+  };
 
   render() {
     return (
       <MuiThemeProvider muiTheme={this.state.muiTheme}>
-        <Paper style={{
-          padding: '8px 8px 32px'
-        }}>
+        <Paper style={styles.paperStyle}>
           <h1>Demo of material-ui-flat-pagination</h1>
           <h3>Basic Pagination</h3>
           <FlatPagination
             offset={this.state.defaultPagination.offset}
             limit={this.state.defaultPagination.limit}
             total={this.state.defaultPagination.total}
-            onClick={(e, offset) => this.handleClick(offset, 'defaultPagination')}
+            onClick={this.handleClick('defaultPagination')}
           />
           <h3>Reduced Pagination</h3>
           <FlatPagination
             offset={this.state.reducedPagination.offset}
             limit={this.state.reducedPagination.limit}
             total={this.state.reducedPagination.total}
-            onClick={(e, offset) => this.handleClick(offset, 'reducedPagination')}
+            onClick={this.handleClick('reducedPagination')}
             reduced={true}
           />
           <Toggle
             label="Dark Theme"
             labelPosition="right"
-            style={{width: '160px', marginTop: '32px'}}
-            onToggle={(e, isInputChecked) => this.handleChangeTheme(isInputChecked)}
+            style={styles.toggleStyle}
+            onToggle={this.handleToggleTheme}
           />
         </Paper>
       </MuiThemeProvider>
