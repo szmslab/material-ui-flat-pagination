@@ -69,7 +69,7 @@ ReactDOM.render(
 | `disableTouchRipple` | bool | false | If true, the button's ripple effect will be disabled. |
 | `hoverColor` | string |  | Color of button when mouse hovers over. |
 | `nextPageLabel` | node | '>' | Label for the next page button. |
-| `onClick` | func |  | Callback function fired when the button is touch-tapped.<br><br>Signature:<br>`function(event: object, offset: number) => void`<br>event: TouchTap event targeting the button.<br>offset: The number of new offset. |
+| `onClick` | func |  | Callback function fired when the button is clicked.<br><br>Signature:<br>`function(event: object, offset: number) => void`<br>event: Click event targeting the button.<br>offset: The number of new offset. |
 | `otherPageLabelStyle` | object |  | Override the inline-styles of the button's label element of other pages except the current page. |
 | `otherPageStyle` | object |  | Override the inline-styles of the button element of other pages except the current page. |
 | `previousPageLabel` | node | '<' | Label for the previous page button. |
