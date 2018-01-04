@@ -63,6 +63,7 @@ ReactDOM.render(
 | **`offset`** (required) | validateNumber |  | The number of rows to skip. Allow a number greater than or equal to `0`.|
 | **`total`** (required) | validateNumber |  | The total number of rows. Allow a number greater than or equal to `0`.|
 | `className` | string |  | The CSS class name of the root element. |
+| `currentPageHoverColor` | string |  | Color of the current page button when mouse hovers over. |
 | `currentPageLabelStyle` | object |  | Override the inline-styles of the button's label element of current page. |
 | `currentPageStyle` | object |  | Override the inline-styles of the button element of current page. |
 | `disabled` | bool | false | If true, the button will be disabled. |

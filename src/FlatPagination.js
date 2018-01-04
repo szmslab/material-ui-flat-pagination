@@ -43,6 +43,7 @@ class FlatPagination extends React.PureComponent {
     limit: validateNumber(1),
     total: validateNumber(0),
     className: PropTypes.string,
+    currentPageHoverColor: PropTypes.string,
     currentPageLabelStyle: PropTypes.object,
     currentPageStyle: PropTypes.object,
     disabled: PropTypes.bool,
@@ -143,7 +144,7 @@ class FlatPagination extends React.PureComponent {
       <FlatButton
         disabled={this.props.disabled || this.props.total <= 0}
         disableTouchRipple={true}
-        hoverColor={this.props.hoverColor}
+        hoverColor={this.props.currentPageHoverColor || this.props.hoverColor}
         key={'cr' + targetPage}
         label={'' + targetPage}
         labelStyle={{...styles.labelStyle, ...this.props.currentPageLabelStyle}}
