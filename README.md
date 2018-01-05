@@ -9,7 +9,7 @@ A pagination component for [Material-UI](http://www.material-ui.com/#/) using Fl
 ## Installation
 
 ```bash
-npm install material-ui-flat-pagination --save
+npm install material-ui-flat-pagination
 ```
 ## Demo
 
@@ -75,7 +75,7 @@ ReactDOM.render(
 | `otherPageStyle` | object |  | Override the inline-styles of the button element of other pages except the current page. |
 | `previousPageLabel` | node | '<' | Label for the previous page button. |
 | `rippleColor` | string |  | Color for the ripple after button is clicked. |
-| `reduced` | bool | false | Reduce the number of buttons displayed if set to true. |
+| `reduced` | bool | false | Reduce the number of displayed buttons if set to true. |
 | `style` | object |  | Override the inline-styles of the root element. |
 
 ## License

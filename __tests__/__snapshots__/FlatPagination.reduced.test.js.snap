@@ -1596,7 +1596,7 @@ exports[`Reduced Pagination (reduced=true) offset: 0, limit: 10, total: 60 snaps
   <FlatButton
     disabled={true}
     fullWidth={false}
-    key="re"
+    key="he"
     label="..."
     labelPosition="after"
     labelStyle={
@@ -2625,7 +2625,7 @@ exports[`Reduced Pagination (reduced=true) offset: 0, limit: 10, total: 1000 sna
   <FlatButton
     disabled={true}
     fullWidth={false}
-    key="re"
+    key="he"
     label="..."
     labelPosition="after"
     labelStyle={
@@ -6993,7 +6993,7 @@ exports[`Reduced Pagination (reduced=true) offset: 30, limit: 10, total: 1000 sn
   <FlatButton
     disabled={true}
     fullWidth={false}
-    key="re"
+    key="he"
     label="..."
     labelPosition="after"
     labelStyle={
@@ -8325,7 +8325,7 @@ exports[`Reduced Pagination (reduced=true) offset: 40, limit: 10, total: 1000 sn
   <FlatButton
     disabled={true}
     fullWidth={false}
-    key="re"
+    key="he"
     label="..."
     labelPosition="after"
     labelStyle={
@@ -10686,7 +10686,7 @@ exports[`Reduced Pagination (reduced=true) offset: 950, limit: 10, total: 1000 s
   <FlatButton
     disabled={true}
     fullWidth={false}
-    key="re"
+    key="he"
     label="..."
     labelPosition="after"
     labelStyle={

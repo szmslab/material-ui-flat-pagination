@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Basic Pagination (reduced=false) offset: 0, limit: 10, total: 10 snapshot 1`] = `
+exports[`Default Pagination (reduced=false) offset: 0, limit: 10, total: 10 snapshot 1`] = `
 <div
   className="material-ui-flat-pagination"
 >
@@ -420,7 +420,7 @@ exports[`Basic Pagination (reduced=false) offset: 0, limit: 10, total: 10 snapsh
 </div>
 `;
 
-exports[`Basic Pagination (reduced=false) offset: 0, limit: 10, total: 11 snapshot 1`] = `
+exports[`Default Pagination (reduced=false) offset: 0, limit: 10, total: 11 snapshot 1`] = `
 <div
   className="material-ui-flat-pagination"
 >
@@ -1008,7 +1008,7 @@ exports[`Basic Pagination (reduced=false) offset: 0, limit: 10, total: 11 snapsh
 </div>
 `;
 
-exports[`Basic Pagination (reduced=false) offset: 0, limit: 10, total: 100 snapshot 1`] = `
+exports[`Default Pagination (reduced=false) offset: 0, limit: 10, total: 100 snapshot 1`] = `
 <div
   className="material-ui-flat-pagination"
 >
@@ -1902,7 +1902,7 @@ exports[`Basic Pagination (reduced=false) offset: 0, limit: 10, total: 100 snaps
   <FlatButton
     disabled={true}
     fullWidth={false}
-    key="re"
+    key="he"
     label="..."
     labelPosition="after"
     labelStyle={
@@ -2496,7 +2496,7 @@ exports[`Basic Pagination (reduced=false) offset: 0, limit: 10, total: 100 snaps
 </div>
 `;
 
-exports[`Basic Pagination (reduced=false) offset: 0, limit: 10, total: 1000 snapshot 1`] = `
+exports[`Default Pagination (reduced=false) offset: 0, limit: 10, total: 1000 snapshot 1`] = `
 <div
   className="material-ui-flat-pagination"
 >
@@ -3390,7 +3390,7 @@ exports[`Basic Pagination (reduced=false) offset: 0, limit: 10, total: 1000 snap
   <FlatButton
     disabled={true}
     fullWidth={false}
-    key="re"
+    key="he"
     label="..."
     labelPosition="after"
     labelStyle={
@@ -3984,7 +3984,7 @@ exports[`Basic Pagination (reduced=false) offset: 0, limit: 10, total: 1000 snap
 </div>
 `;
 
-exports[`Basic Pagination (reduced=false) offset: 10, limit: 10, total: 11 snapshot 1`] = `
+exports[`Default Pagination (reduced=false) offset: 10, limit: 10, total: 11 snapshot 1`] = `
 <div
   className="material-ui-flat-pagination"
 >
@@ -4572,7 +4572,7 @@ exports[`Basic Pagination (reduced=false) offset: 10, limit: 10, total: 11 snaps
 </div>
 `;
 
-exports[`Basic Pagination (reduced=false) offset: 40, limit: 10, total: 100 snapshot 1`] = `
+exports[`Default Pagination (reduced=false) offset: 40, limit: 10, total: 100 snapshot 1`] = `
 <div
   className="material-ui-flat-pagination"
 >
@@ -6399,7 +6399,7 @@ exports[`Basic Pagination (reduced=false) offset: 40, limit: 10, total: 100 snap
 </div>
 `;
 
-exports[`Basic Pagination (reduced=false) offset: 50, limit: 10, total: 100 snapshot 1`] = `
+exports[`Default Pagination (reduced=false) offset: 50, limit: 10, total: 100 snapshot 1`] = `
 <div
   className="material-ui-flat-pagination"
 >
@@ -8226,7 +8226,7 @@ exports[`Basic Pagination (reduced=false) offset: 50, limit: 10, total: 100 snap
 </div>
 `;
 
-exports[`Basic Pagination (reduced=false) offset: 50, limit: 10, total: 1000 snapshot 1`] = `
+exports[`Default Pagination (reduced=false) offset: 50, limit: 10, total: 1000 snapshot 1`] = `
 <div
   className="material-ui-flat-pagination"
 >
@@ -9594,7 +9594,7 @@ exports[`Basic Pagination (reduced=false) offset: 50, limit: 10, total: 1000 sna
   <FlatButton
     disabled={true}
     fullWidth={false}
-    key="re"
+    key="he"
     label="..."
     labelPosition="after"
     labelStyle={
@@ -10188,7 +10188,7 @@ exports[`Basic Pagination (reduced=false) offset: 50, limit: 10, total: 1000 sna
 </div>
 `;
 
-exports[`Basic Pagination (reduced=false) offset: 60, limit: 10, total: 1000 snapshot 1`] = `
+exports[`Default Pagination (reduced=false) offset: 60, limit: 10, total: 1000 snapshot 1`] = `
 <div
   className="material-ui-flat-pagination"
 >
@@ -11538,7 +11538,7 @@ exports[`Basic Pagination (reduced=false) offset: 60, limit: 10, total: 1000 sna
   <FlatButton
     disabled={true}
     fullWidth={false}
-    key="re"
+    key="he"
     label="..."
     labelPosition="after"
     labelStyle={
@@ -12132,7 +12132,7 @@ exports[`Basic Pagination (reduced=false) offset: 60, limit: 10, total: 1000 sna
 </div>
 `;
 
-exports[`Basic Pagination (reduced=false) offset: 90, limit: 10, total: 100 snapshot 1`] = `
+exports[`Default Pagination (reduced=false) offset: 90, limit: 10, total: 100 snapshot 1`] = `
 <div
   className="material-ui-flat-pagination"
 >
@@ -13620,7 +13620,7 @@ exports[`Basic Pagination (reduced=false) offset: 90, limit: 10, total: 100 snap
 </div>
 `;
 
-exports[`Basic Pagination (reduced=false) offset: 930, limit: 10, total: 1000 snapshot 1`] = `
+exports[`Default Pagination (reduced=false) offset: 930, limit: 10, total: 1000 snapshot 1`] = `
 <div
   className="material-ui-flat-pagination"
 >
@@ -14970,7 +14970,7 @@ exports[`Basic Pagination (reduced=false) offset: 930, limit: 10, total: 1000 sn
   <FlatButton
     disabled={true}
     fullWidth={false}
-    key="re"
+    key="he"
     label="..."
     labelPosition="after"
     labelStyle={
@@ -15564,7 +15564,7 @@ exports[`Basic Pagination (reduced=false) offset: 930, limit: 10, total: 1000 sn
 </div>
 `;
 
-exports[`Basic Pagination (reduced=false) offset: 940, limit: 10, total: 1000 snapshot 1`] = `
+exports[`Default Pagination (reduced=false) offset: 940, limit: 10, total: 1000 snapshot 1`] = `
 <div
   className="material-ui-flat-pagination"
 >
@@ -17526,7 +17526,7 @@ exports[`Basic Pagination (reduced=false) offset: 940, limit: 10, total: 1000 sn
 </div>
 `;
 
-exports[`Basic Pagination (reduced=false) offset: 990, limit: 10, total: 1000 snapshot 1`] = `
+exports[`Default Pagination (reduced=false) offset: 990, limit: 10, total: 1000 snapshot 1`] = `
 <div
   className="material-ui-flat-pagination"
 >

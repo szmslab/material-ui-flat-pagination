@@ -3,6 +3,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import FlatButton from 'material-ui/FlatButton';
+import {computePagination, getOffset} from './core';
 
 const styles = {
   buttonStyle: {
@@ -22,15 +23,17 @@ const validateNumber = (min) => {
     const type = typeof value;
     if (type !== 'number') {
       return new Error(
-        'Failed prop type: Invalid prop `' + propName + '` of type `' + type +
-        '` supplied to `' + componentName + '`, expected `number`.'
+        'Failed prop type: '
+        + `Invalid prop \`${propName}\` of type \`${type}\` supplied to \`${componentName}\``
+        + ', expected `number`.'
       );
     }
     const intValue = parseInt(value, 10);
     if (intValue < min) {
       return new Error(
-        'Failed prop value: Invalid prop `' + propName + '` of value `' + value +
-        '` supplied to `' + componentName + '`, expected a number greater than or equal to `' + min + '`.'
+        'Failed prop value: '
+        + `Invalid prop \`${propName}\` of value \`${value}\` supplied to \`${componentName}\``
+        + `, expected a number greater than or equal to \`${min}\`.`
       );
     }
   };
@@ -43,18 +46,18 @@ class FlatPagination extends React.PureComponent {
     limit: validateNumber(1),
     total: validateNumber(0),
     className: PropTypes.string,
-    currentPageHoverColor: PropTypes.string,
-    currentPageLabelStyle: PropTypes.object,
-    currentPageStyle: PropTypes.object,
-    disabled: PropTypes.bool,
-    disableTouchRipple: PropTypes.bool,
-    hoverColor: PropTypes.string,
+    currentPageHoverColor: FlatButton.propTypes.hoverColor,
+    currentPageLabelStyle: FlatButton.propTypes.labelStyle,
+    currentPageStyle: FlatButton.propTypes.style,
+    disabled: FlatButton.propTypes.disabled,
+    disableTouchRipple: FlatButton.propTypes.disableTouchRipple,
+    hoverColor: FlatButton.propTypes.hoverColor,
     nextPageLabel: PropTypes.node,
-    onClick: PropTypes.func,
-    otherPageLabelStyle: PropTypes.object,
-    otherPageStyle: PropTypes.object,
+    onClick: FlatButton.propTypes.onClick,
+    otherPageLabelStyle: FlatButton.propTypes.labelStyle,
+    otherPageStyle: FlatButton.propTypes.style,
     previousPageLabel: PropTypes.node,
-    rippleColor: PropTypes.string,
+    rippleColor: FlatButton.propTypes.rippleColor,
     reduced: PropTypes.bool,
     style: PropTypes.object
   };
@@ -68,76 +71,8 @@ class FlatPagination extends React.PureComponent {
   };
 
   handleClick = (targetPage) => (e) => {
-    const offset = (targetPage - 1) * this.props.limit;
-    this.props.onClick && this.props.onClick(e, offset);
+    this.props.onClick && this.props.onClick(e, getOffset(targetPage, this.props.limit));
   };
-
-  renderButtons() {
-    const {
-      offset,
-      limit,
-      total,
-      reduced,
-      previousPageLabel,
-      nextPageLabel
-    } = this.props;
-
-    const minPage = 1;
-    const maxPage = Math.floor(total / limit) + (total % limit === 0 ? 0 : 1);
-    const currentPage = Math.floor(offset / limit) + 1;
-    const previousPage = currentPage <= minPage ? 0 : currentPage - 1;
-    const nextPage = currentPage >= maxPage ? 0 : currentPage + 1;
-
-    const innerPageCount = reduced ? 1 : 2;
-    const outerPageCount = innerPageCount;
-
-    const buttons = [];
-
-    // previous
-    buttons.push(this.renderEndButton(previousPage, previousPageLabel, 'pr'));
-
-    // left
-    const leftAdditionalInnerPageCount = Math.max(innerPageCount + currentPage - maxPage, 0);
-    const leftInnerEllipsisPage = currentPage - innerPageCount - leftAdditionalInnerPageCount - 1;
-    const leftOuterEllipsisPage = minPage + outerPageCount;
-    for (let i = minPage; i < currentPage; i++) {
-      if (i < leftOuterEllipsisPage) {
-        buttons.push(this.renderOtherButton(i));
-      } else {
-        buttons.push(i === leftOuterEllipsisPage && i < leftInnerEllipsisPage
-          ? this.renderEllipsisButton('le') : this.renderOtherButton(i));
-        for (let j = Math.max(i, leftInnerEllipsisPage) + 1; j < currentPage; j++) {
-          buttons.push(this.renderOtherButton(j));
-        }
-        break;
-      }
-    }
-
-    // current
-    buttons.push(this.renderCurrentButton(currentPage));
-
-    // right
-    const rightAdditionalInnerPageCount = Math.max(innerPageCount - currentPage + minPage, 0);
-    const rightInnerEllipsisPage = currentPage + innerPageCount + rightAdditionalInnerPageCount + 1;
-    const rightOuterEllipsisPage = maxPage - outerPageCount;
-    for (let i = currentPage + 1; i <= maxPage; i++) {
-      if (i < rightInnerEllipsisPage) {
-        buttons.push(this.renderOtherButton(i));
-      } else {
-        buttons.push(i === rightInnerEllipsisPage && i < rightOuterEllipsisPage
-          ? this.renderEllipsisButton('re') : this.renderOtherButton(i));
-        for (let j = Math.max(i, rightOuterEllipsisPage) + 1; j <= maxPage; j++) {
-          buttons.push(this.renderOtherButton(j));
-        }
-        break;
-      }
-    }
-
-    // next
-    buttons.push(this.renderEndButton(nextPage, nextPageLabel, 'nx'));
-
-    return buttons;
-  }
 
   renderCurrentButton(targetPage) {
     return (
@@ -176,7 +111,6 @@ class FlatPagination extends React.PureComponent {
     return (
       <FlatButton
         disabled={true}
-        hoverColor={this.props.hoverColor}
         key={key}
         label="..."
         labelStyle={{...styles.ellipsisLabelStyle, ...this.props.otherPageLabelStyle}}
@@ -206,15 +140,37 @@ class FlatPagination extends React.PureComponent {
 
   render() {
     const {
+      offset,
+      limit,
+      total,
       className,
+      nextPageLabel,
+      previousPageLabel,
+      reduced,
       style
     } = this.props;
+
     return (
       <div
         className={'material-ui-flat-pagination' + (className ? ' ' + className : '')}
         style={style}
       >
-        {this.renderButtons()}
+        {
+          computePagination(offset, limit, total, reduced ? 1 : 2).map(o => {
+            if (o.isCurrent) {
+              return this.renderCurrentButton(o.page);
+            } else if (o.isEnd) {
+              if (o.isLowSide) {
+                return this.renderEndButton(o.page, previousPageLabel, 'pr');
+              } else {
+                return this.renderEndButton(o.page, nextPageLabel, 'nx');
+              }
+            } else if (o.isEllipsis) {
+              return this.renderEllipsisButton(o.isLowSide ? 'le' : 'he');
+            }
+            return this.renderOtherButton(o.page);
+          })
+        }
       </div>
     );
   }

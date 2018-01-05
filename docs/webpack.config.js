@@ -6,12 +6,10 @@ module.exports = function (env) {
   console.log(env);
 
   return {
-    entry: {
-      'demo': './demo.js',
-    },
+    entry: './index.js',
     output: {
       path: __dirname,
-      filename: '[name].bundle.js',
+      filename: 'bundle.js',
       publicPath: '/'
     },
     resolve: {

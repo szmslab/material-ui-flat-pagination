@@ -11,7 +11,7 @@ import FlatPagination from '../src/FlatPagination';
 
 configure({adapter: new Adapter()});
 
-describe('Basic Pagination (reduced=false)', () => {
+describe('Default Pagination (reduced=false)', () => {
   const wrapper = (commonProps, otherProps) => {
     const props = Object.assign({}, commonProps, otherProps);
     return mount(
