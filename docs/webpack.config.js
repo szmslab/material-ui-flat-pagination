@@ -6,6 +6,7 @@ module.exports = function (env) {
   console.log(env);
 
   return {
+    mode: env.production ? 'production' : 'development',
     entry: './index.js',
     output: {
       path: __dirname,
@@ -26,6 +27,9 @@ module.exports = function (env) {
           }
         }
       ]
+    },
+    performance: {
+      hints: false
     }
   };
 };
