@@ -53,7 +53,7 @@ class FlatPagination extends React.PureComponent {
     disableTouchRipple: FlatButton.propTypes.disableTouchRipple,
     hoverColor: FlatButton.propTypes.hoverColor,
     nextPageLabel: PropTypes.node,
-    onClick: FlatButton.propTypes.onClick,
+    onClick: PropTypes.func,
     otherPageLabelStyle: FlatButton.propTypes.labelStyle,
     otherPageStyle: FlatButton.propTypes.style,
     previousPageLabel: PropTypes.node,
