@@ -1,43 +1,45 @@
 {
   "name": "material-ui-flat-pagination",
-  "description": "A pagination component for Material-UI using Flat Button.",
-  "version": "2.1.4",
+  "description": "A pagination component for Material-UI using Button component.",
+  "version": "3.0.0-SNAPSHOT",
   "author": "szmslab <szmslab@gmail.com> (https://github.com/szmslab)",
   "bugs": {
     "url": "https://github.com/szmslab/material-ui-flat-pagination/issues"
   },
   "dependencies": {
-    "prop-types": "^15.6.2"
+    "classnames": "^2.2.6"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-eslint": "^9.0.0",
-    "babel-jest": "^23.6.0",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-0": "^6.24.1",
+    "@material-ui/core": "^3.1.0",
+    "@types/classnames": "^2.2.6",
+    "@types/enzyme": "^3.1.14",
+    "@types/enzyme-adapter-react-16": "^1.0.3",
+    "@types/jest": "^23.3.2",
+    "@types/react": "^16.4.14",
+    "@types/react-dom": "^16.0.7",
     "coveralls": "^3.0.2",
     "enzyme": "^3.6.0",
     "enzyme-adapter-react-16": "^1.5.0",
     "enzyme-to-json": "^3.3.4",
-    "eslint": "^5.6.0",
-    "eslint-plugin-react": "^7.11.1",
     "jest": "^23.6.0",
-    "material-ui": "^0.20.2",
-    "raf": "^3.4.0",
-    "react": "^16.5.1",
-    "react-dom": "^16.5.1",
-    "react-test-renderer": "^16.5.1",
-    "regenerator-runtime": "^0.12.1",
-    "rimraf": "^2.6.2"
+    "prettier": "^1.14.2",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-test-renderer": "^16.5.2",
+    "rimraf": "^2.6.2",
+    "ts-jest": "^23.1.4",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.15.0",
+    "tslint-plugin-prettier": "^2.0.0",
+    "tslint-react": "^3.6.0",
+    "typescript": "^3.0.3"
   },
   "peerDependencies": {
-    "material-ui": ">=0.18.0 <1.0.0",
-    "react": "^15.5.0 || ^16.0.0",
-    "react-dom": "^15.5.0 || ^16.0.0"
+    "@material-ui/core": ">=1.0.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
   },
   "files": [
-    "index.js",
     "lib",
     "LICENSE",
     "package.json",
@@ -50,16 +52,16 @@
     "react"
   ],
   "license": "MIT",
-  "main": "index.js",
+  "main": "./lib/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/szmslab/material-ui-flat-pagination.git"
   },
   "scripts": {
-    "build": "babel src --out-dir lib",
-    "clean": "rimraf lib",
-    "lint": "eslint src/**/*.js",
-    "jest": "jest",
-    "test": "jest && coveralls < ./coverage/lcov.info"
-  }
+    "build": "rimraf lib && tsc",
+    "lint": "tslint src/**/*.ts{,x}",
+    "jest": "jest --config=jest.config.json",
+    "test": "jest --config=jest.config.json && coveralls < ./coverage/lcov.info"
+  },
+  "types": "./lib/index.d.ts"
 }

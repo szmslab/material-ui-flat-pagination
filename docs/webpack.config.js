@@ -1,28 +1,27 @@
 const path = require('path');
 
-module.exports = function (env) {
-  console.log('--- env ---');
-  console.log(env);
+module.exports = function(env, argv) {
+  const mode = argv && argv.mode ? argv.mode : 'development';
+  console.log('mode: ' + mode);
 
   return {
-    mode: env.production ? 'production' : 'development',
-    entry: './index.js',
+    mode: mode,
+    entry: './src/index.tsx',
     output: {
       path: __dirname,
-      filename: 'bundle.js',
-      publicPath: '/'
+      filename: 'bundle.js'
     },
     resolve: {
       modules: [path.resolve(__dirname, 'node_modules')],
-      extensions: ['.webpack.js', '.web.js', '.js', '.jsx']
+      extensions: ['.tsx', '.ts', '.js']
     },
     module: {
       rules: [
         {
-          test: /\.jsx?$/,
+          test: /\.tsx?$/,
           exclude: /node_modules/,
           use: {
-            loader: 'babel-loader'
+            loader: 'ts-loader'
           }
         }
       ]
