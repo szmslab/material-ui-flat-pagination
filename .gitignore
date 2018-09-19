@@ -154,5 +154,7 @@ typings/
 # Serverless directories
 .serverless
 
+### Application ###
+lib
 
 # End of https://www.gitignore.io/api/node,intellij+all
