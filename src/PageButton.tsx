@@ -20,21 +20,29 @@ export type PageButtonClassKey =
   | 'colorInheritOther'
   | 'disabled'
   | 'sizeSmall'
+  | 'sizeSmallCurrent'
+  | 'sizeSmallEllipsis'
+  | 'sizeSmallEnd'
+  | 'sizeSmallStandard'
   | 'sizeLarge'
+  | 'sizeLargeCurrent'
+  | 'sizeLargeEllipsis'
+  | 'sizeLargeEnd'
+  | 'sizeLargeStandard'
   | 'fullWidth';
 
 const styles = (theme: Theme) =>
   createStyles<PageButtonClassKey>({
     root: {
-      minWidth: 0
+      minWidth: 16
     },
     rootCurrent: {
       paddingLeft: theme.spacing.unit * 1.5,
       paddingRight: theme.spacing.unit * 1.5
     },
     rootEllipsis: {
-      paddingLeft: theme.spacing.unit / 2,
-      paddingRight: theme.spacing.unit / 2
+      paddingLeft: theme.spacing.unit * 0.5,
+      paddingRight: theme.spacing.unit * 0.5
     },
     rootEnd: {
       paddingLeft: theme.spacing.unit * 1.5,
@@ -52,8 +60,44 @@ const styles = (theme: Theme) =>
     colorInheritCurrent: {},
     colorInheritOther: {},
     disabled: {},
-    sizeSmall: {},
-    sizeLarge: {},
+    sizeSmall: {
+      minWidth: 8
+    },
+    sizeSmallCurrent: {
+      paddingLeft: theme.spacing.unit,
+      paddingRight: theme.spacing.unit
+    },
+    sizeSmallEllipsis: {
+      paddingLeft: theme.spacing.unit * 0.25,
+      paddingRight: theme.spacing.unit * 0.25
+    },
+    sizeSmallEnd: {
+      paddingLeft: theme.spacing.unit,
+      paddingRight: theme.spacing.unit
+    },
+    sizeSmallStandard: {
+      paddingLeft: theme.spacing.unit,
+      paddingRight: theme.spacing.unit
+    },
+    sizeLarge: {
+      minWidth: 24
+    },
+    sizeLargeCurrent: {
+      paddingLeft: theme.spacing.unit * 2,
+      paddingRight: theme.spacing.unit * 2
+    },
+    sizeLargeEllipsis: {
+      paddingLeft: theme.spacing.unit * 0.75,
+      paddingRight: theme.spacing.unit * 0.75
+    },
+    sizeLargeEnd: {
+      paddingLeft: theme.spacing.unit * 2,
+      paddingRight: theme.spacing.unit * 2
+    },
+    sizeLargeStandard: {
+      paddingLeft: theme.spacing.unit * 2,
+      paddingRight: theme.spacing.unit * 2
+    },
     fullWidth: {}
   });
 
@@ -89,6 +133,7 @@ const PageButton: React.SFC<PageButtonProps & WithStyles<PageButtonClassKey>> = 
     disableRipple: disableRippleProp,
     onClick: onClickProp,
     otherPageColor,
+    size,
     ...other
   } = props;
 
@@ -97,6 +142,9 @@ const PageButton: React.SFC<PageButtonProps & WithStyles<PageButtonClassKey>> = 
   const isEnd = pageVariant === 'end';
   const isStandard = pageVariant === 'standard';
 
+  const isSmall = size === 'small';
+  const isLarge = size === 'large';
+
   const {
     rootCurrent,
     rootEllipsis,
@@ -104,6 +152,14 @@ const PageButton: React.SFC<PageButtonProps & WithStyles<PageButtonClassKey>> = 
     rootStandard,
     colorInheritCurrent,
     colorInheritOther,
+    sizeSmallCurrent,
+    sizeSmallEllipsis,
+    sizeSmallEnd,
+    sizeSmallStandard,
+    sizeLargeCurrent,
+    sizeLargeEllipsis,
+    sizeLargeEnd,
+    sizeLargeStandard,
     ...classes
   } = classesProp;
   classes.root = classNames(classes.root, {
@@ -115,6 +171,18 @@ const PageButton: React.SFC<PageButtonProps & WithStyles<PageButtonClassKey>> = 
   classes.colorInherit = classNames(classes.colorInherit, {
     [colorInheritCurrent]: isCurrent,
     [colorInheritOther]: !isCurrent
+  });
+  classes.sizeSmall = classNames(classes.sizeSmall, {
+    [sizeSmallCurrent]: isCurrent && isSmall,
+    [sizeSmallEllipsis]: isEllipsis && isSmall,
+    [sizeSmallEnd]: isEnd && isSmall,
+    [sizeSmallStandard]: isStandard && isSmall
+  });
+  classes.sizeLarge = classNames(classes.sizeLarge, {
+    [sizeLargeCurrent]: isCurrent && isLarge,
+    [sizeLargeEllipsis]: isEllipsis && isLarge,
+    [sizeLargeEnd]: isEnd && isLarge,
+    [sizeLargeStandard]: isStandard && isLarge
   });
   const color = isCurrent ? currentPageColor : otherPageColor;
   const disabled = disabledProp || isEllipsis || page <= 0 || total <= 0;
@@ -131,6 +199,7 @@ const PageButton: React.SFC<PageButtonProps & WithStyles<PageButtonClassKey>> = 
       disabled={disabled}
       disableRipple={disableRipple}
       onClick={onClick}
+      size={size}
       {...other}
     />
   );

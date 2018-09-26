@@ -198,7 +198,15 @@ describe('PageButton', () => {
       'colorInheritOther',
       'disabled',
       'sizeSmall',
+      'sizeSmallCurrent',
+      'sizeSmallEllipsis',
+      'sizeSmallEnd',
+      'sizeSmallStandard',
       'sizeLarge',
+      'sizeLargeCurrent',
+      'sizeLargeEllipsis',
+      'sizeLargeEnd',
+      'sizeLargeStandard',
       'fullWidth'
     ].forEach(propertyName => {
       it(`=> ${propertyName}`, () => {

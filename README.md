@@ -108,7 +108,15 @@ Any other properties supplied will be spread to the root element.
 | `colorInheritOther` | Styles applied to the root element of the other page button if `otherPageColor="inherit"`. |
 | `disabled` | Styles applied to the root element of the page button if `disabled={true}`. |
 | `sizeSmall` | Styles applied to the root element of the page button if `size="small"`. |
+| `sizeSmallCurrent` | Styles applied to the root element of the current page button if `size="small"`. |
+| `sizeSmallEllipsis` | Styles applied to the root element of the ellipsis page button if `size="small"`. |
+| `sizeSmallEnd` | Styles applied to the root element of the end page button if `size="small"`. |
+| `sizeSmallStandard` | Styles applied to the root element of the standard page button if `size="small"`. |
 | `sizeLarge` | Styles applied to the root element of the page button if `size="large"`. |
+| `sizeLargeCurrent` | Styles applied to the root element of the current page button if `size="large"`. |
+| `sizeLargeEllipsis` | Styles applied to the root element of the ellipsis page button if `size="large"`. |
+| `sizeLargeEnd` | Styles applied to the root element of the end page button if `size="large"`. |
+| `sizeLargeStandard` | Styles applied to the root element of the standard page button if `size="large"`. |
 | `fullWidth` | Styles applied to the root element of the page button if `fullWidth={true}.` |
 
 ## License

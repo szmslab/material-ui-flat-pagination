@@ -22,7 +22,15 @@ const styles = createStyles<PaginationClassKey>({
   colorInheritOther: {},
   disabled: {},
   sizeSmall: {},
+  sizeSmallCurrent: {},
+  sizeSmallEllipsis: {},
+  sizeSmallEnd: {},
+  sizeSmallStandard: {},
   sizeLarge: {},
+  sizeLargeCurrent: {},
+  sizeLargeEllipsis: {},
+  sizeLargeEnd: {},
+  sizeLargeStandard: {},
   fullWidth: {}
 });
 

@@ -35,21 +35,13 @@ const muiTheme = {
 };
 
 const styles = (theme: Theme) =>
-  createStyles<'paperRoot' | PaginationClassKey>({
+  createStyles<
+    'paperRoot' | Extract<PaginationClassKey, 'colorInheritCurrent' | 'colorInheritOther'>
+  >({
     paperRoot: {
       margin: theme.spacing.unit * 2,
       padding: theme.spacing.unit * 2
     },
-    root: {},
-    rootCurrent: {},
-    rootEllipsis: {},
-    rootEnd: {},
-    rootStandard: {},
-    label: {},
-    text: {},
-    textPrimary: {},
-    textSecondary: {},
-    colorInherit: {},
     colorInheritCurrent: {
       color: deepOrange.A200,
       '&:hover': {
@@ -61,11 +53,7 @@ const styles = (theme: Theme) =>
       '&:hover': {
         backgroundColor: fade(green['500'], theme.palette.action.hoverOpacity)
       }
-    },
-    disabled: {},
-    sizeSmall: {},
-    sizeLarge: {},
-    fullWidth: {}
+    }
   });
 
 enum PaginationType {
@@ -154,6 +142,7 @@ class Demo extends React.PureComponent<WithStyles<typeof styles>, DemoState> {
             previousPageLabel={<ArrowBack fontSize="inherit" />}
             onClick={this.handleClick(PaginationType.Styled)}
             otherPageColor="inherit"
+            size="large"
           />
         </Paper>
       </MuiThemeProvider>
