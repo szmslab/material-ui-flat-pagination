@@ -24,12 +24,18 @@ const muiTheme = {
     palette: {
       primary: blue,
       type: 'light'
+    },
+    typography: {
+      useNextVariants: true
     }
   }),
   dark: createMuiTheme({
     palette: {
       primary: blue,
       type: 'dark'
+    },
+    typography: {
+      useNextVariants: true
     }
   })
 };

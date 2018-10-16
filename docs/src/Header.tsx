@@ -24,7 +24,7 @@ const Header: React.SFC<HeaderProps & WithStyles<typeof styles>> = props => {
   return (
     <AppBar position="static">
       <Toolbar>
-        <Typography variant="title" color="inherit" classes={titleClasses}>
+        <Typography variant="h6" color="inherit" classes={titleClasses}>
           Demo of material-ui-flat-pagination
         </Typography>
         <Tooltip title="Toggle light/dark theme">

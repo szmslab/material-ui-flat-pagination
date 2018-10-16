@@ -10,7 +10,7 @@ const styles = (theme: Theme) =>
   });
 
 const Headline: React.SFC<WithStyles<typeof styles>> = props => {
-  return <Typography variant="headline" {...props} />;
+  return <Typography variant="h5" {...props} />;
 };
 
 export default withStyles(styles)(Headline);
