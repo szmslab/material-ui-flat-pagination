@@ -1,6 +1,6 @@
 import { PropTypes } from '@material-ui/core';
 import { mount, ReactWrapper, shallow } from 'enzyme';
-import React from 'react';
+import * as React from 'react';
 import { findMuiButton } from './_utils';
 import PageButton, { PageVariant } from '../src/PageButton';
 

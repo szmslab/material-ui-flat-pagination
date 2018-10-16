@@ -1,5 +1,5 @@
 import { mount, ReactWrapper, render, shallow } from 'enzyme';
-import React from 'react';
+import * as React from 'react';
 import { findMuiButton, findPageButton } from './_utils';
 import Pagination, { PaginationProps } from '../src/index';
 import { PageVariant } from '../src/PageButton';
