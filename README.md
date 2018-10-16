@@ -84,7 +84,7 @@ ReactDOM.render(<Example />, document.getElementById("root"));
 | `nextPageLabel` | node | '>' | The content of the next page button. |
 | `onClick` | func |  | Callback fired when the button is clicked.<br><br>Signature:<br>`function(event: object, offset: number) => void`<br>event: The event source of the callback.<br>offset: The number of new offset. |
 | `otherPageColor` | enum:<br>&nbsp;'default' &#124;<br>&nbsp;'inherit' &#124;<br>&nbsp;'primary' &#124;<br>&nbsp;'secondary' | 'primary' | The color of the buttons of other pages excluding the current page. |
-| `previousPageLabel` | node | '>' | The content of the previous page button. |
+| `previousPageLabel` | node | '<' | The content of the previous page button. |
 | `reduced` | bool | false | If true, the number of displayed buttons will be reduced. |
 | `size` | enum:<br>&nbsp;'small' &#124;<br>&nbsp;'medium' &#124;<br>&nbsp;'large' | 'medium' | The size of all buttons. |
 
