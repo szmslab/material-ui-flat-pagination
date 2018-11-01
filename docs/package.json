@@ -1,28 +1,28 @@
 {
   "name": "material-ui-flat-pagination-demo",
   "description": "Demo of material-ui-flat-pagination.",
-  "version": "3.0.2",
+  "version": "3.0.3-SNAPSHOT",
   "author": "szmslab <szmslab@gmail.com> (https://github.com/szmslab)",
   "dependencies": {
-    "@material-ui/core": "^3.2.2",
+    "@material-ui/core": "^3.3.2",
     "@material-ui/icons": "^3.0.1",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2"
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0"
   },
   "devDependencies": {
-    "@types/react": "^16.4.17",
+    "@types/react": "^16.4.18",
     "@types/react-dom": "^16.0.9",
     "path": "^0.12.7",
     "prettier": "^1.14.3",
-    "ts-loader": "^5.2.2",
+    "ts-loader": "^5.3.0",
     "tslint": "^5.11.0",
     "tslint-config-prettier": "^1.15.0",
-    "tslint-plugin-prettier": "^2.0.0",
+    "tslint-plugin-prettier": "^2.0.1",
     "tslint-react": "^3.6.0",
-    "typescript": "^3.1.3",
-    "webpack": "^4.20.2",
+    "typescript": "^3.1.5",
+    "webpack": "^4.23.1",
     "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.9"
+    "webpack-dev-server": "^3.1.10"
   },
   "license": "MIT",
   "main": "",
