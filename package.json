@@ -1,7 +1,7 @@
 {
   "name": "material-ui-flat-pagination",
   "description": "A pagination component for Material-UI using Button component.",
-  "version": "3.0.3",
+  "version": "3.1.0-SNAPSHOT",
   "author": "szmslab <szmslab@gmail.com> (https://github.com/szmslab)",
   "bugs": {
     "url": "https://github.com/szmslab/material-ui-flat-pagination/issues"
@@ -32,7 +32,7 @@
     "tslint-config-prettier": "^1.15.0",
     "tslint-plugin-prettier": "^2.0.1",
     "tslint-react": "^3.6.0",
-    "typescript": "^3.1.5"
+    "typescript": "^3.1.6"
   },
   "peerDependencies": {
     "@material-ui/core": ">=1.0.0",
