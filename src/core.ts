@@ -20,11 +20,18 @@ const createPagePosition = (position: Position, page: number = 0): PagePosition 
 };
 
 export const computePages = (
-  limit: number,
-  offset: number,
-  total: number,
-  reservedPageCount: number
+  limitProp: number,
+  offsetProp: number,
+  totalProp: number,
+  innerButtonCountProp: number,
+  outerButtonCountProp: number
 ): PagePosition[] => {
+  const limit = limitProp >= 1 ? limitProp : 1;
+  const offset = offsetProp >= 0 ? offsetProp : 0;
+  const total = totalProp >= 0 ? totalProp : 0;
+  const innerButtonCount = innerButtonCountProp >= 0 ? innerButtonCountProp : 0;
+  const outerButtonCount = outerButtonCountProp >= 1 ? outerButtonCountProp : 1;
+
   const minPage = 1;
   const maxPage = Math.floor(total / limit) + (total % limit === 0 ? 0 : 1);
   const currentPage = Math.floor(offset / limit) + 1;
@@ -37,9 +44,9 @@ export const computePages = (
   pages.push(createPagePosition(Position.LowEnd, previousPage));
 
   // low
-  const lowInnerReservedPageCount = Math.max(reservedPageCount + currentPage - maxPage, 0);
-  const lowInnerEllipsisPage = currentPage - reservedPageCount - lowInnerReservedPageCount - 1;
-  const lowOuterEllipsisPage = minPage + reservedPageCount;
+  const lowInnerReservedButtonCount = Math.max(innerButtonCount + currentPage - maxPage, 0);
+  const lowInnerEllipsisPage = currentPage - innerButtonCount - lowInnerReservedButtonCount - 1;
+  const lowOuterEllipsisPage = minPage + outerButtonCount;
   for (let i = minPage; i < currentPage; i++) {
     if (i < lowOuterEllipsisPage) {
       pages.push(createPagePosition(Position.Standard, i));
@@ -60,9 +67,9 @@ export const computePages = (
   pages.push(createPagePosition(Position.Current, currentPage));
 
   // high
-  const highInnerReservedPageCount = Math.max(reservedPageCount - currentPage + minPage, 0);
-  const highInnerEllipsisPage = currentPage + reservedPageCount + highInnerReservedPageCount + 1;
-  const highOuterEllipsisPage = maxPage - reservedPageCount;
+  const highInnerReservedButtonCount = Math.max(innerButtonCount - currentPage + minPage, 0);
+  const highInnerEllipsisPage = currentPage + innerButtonCount + highInnerReservedButtonCount + 1;
+  const highOuterEllipsisPage = maxPage - outerButtonCount;
   for (let i = currentPage + 1; i <= maxPage; i++) {
     if (i < highInnerEllipsisPage) {
       pages.push(createPagePosition(Position.Standard, i));

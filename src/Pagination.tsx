@@ -46,9 +46,11 @@ export interface PaginationProps
   disableFocusRipple?: boolean;
   disableRipple?: boolean;
   fullWidth?: boolean;
+  innerButtonCount?: number;
   nextPageLabel?: React.ReactNode;
   onClick?: ((ev: React.MouseEvent<HTMLElement>, offset: number) => void);
   otherPageColor?: PropTypes.Color;
+  outerButtonCount?: number;
   previousPageLabel?: React.ReactNode;
   reduced?: boolean;
   size?: 'small' | 'medium' | 'large';
@@ -69,8 +71,10 @@ const Pagination: React.SFC<PaginationProps & WithStyles<PaginationClassKey>> = 
     disableRipple,
     fullWidth,
     nextPageLabel,
+    innerButtonCount: innerButtonCountProp,
     onClick,
     otherPageColor,
+    outerButtonCount: outerButtonCountProp,
     previousPageLabel,
     reduced,
     size,
@@ -81,60 +85,65 @@ const Pagination: React.SFC<PaginationProps & WithStyles<PaginationClassKey>> = 
 
   const className = classNames(root, classNameProp);
 
+  const innerButtonCount = reduced ? 1 : innerButtonCountProp!;
+  const outerButtonCount = reduced ? 1 : outerButtonCountProp!;
+
   const Component = component!;
   return (
     <Component className={className} {...other}>
-      {computePages(limit, offset, total, reduced ? 1 : 2).map((pp: PagePosition) => {
-        let key: React.Attributes['key'];
-        let children: React.ReactNode;
-        let pageVariant: PageVariant;
-        switch (pp.position) {
-          case Position.Current:
-            key = pp.position;
-            children = pp.page;
-            pageVariant = 'current';
-            break;
-          case Position.LowEllipsis:
-          case Position.HighEllipsis:
-            key = -pp.position;
-            children = '...';
-            pageVariant = 'ellipsis';
-            break;
-          case Position.LowEnd:
-          case Position.HighEnd:
-            key = -pp.position;
-            children = pp.position === Position.LowEnd ? previousPageLabel : nextPageLabel;
-            pageVariant = 'end';
-            break;
-          default:
-            key = pp.page;
-            children = pp.page;
-            pageVariant = 'standard';
-            break;
-        }
+      {computePages(limit, offset, total, innerButtonCount, outerButtonCount).map(
+        (pp: PagePosition) => {
+          let key: React.Attributes['key'];
+          let children: React.ReactNode;
+          let pageVariant: PageVariant;
+          switch (pp.position) {
+            case Position.Current:
+              key = pp.position;
+              children = pp.page;
+              pageVariant = 'current';
+              break;
+            case Position.LowEllipsis:
+            case Position.HighEllipsis:
+              key = -pp.position;
+              children = '...';
+              pageVariant = 'ellipsis';
+              break;
+            case Position.LowEnd:
+            case Position.HighEnd:
+              key = -pp.position;
+              children = pp.position === Position.LowEnd ? previousPageLabel : nextPageLabel;
+              pageVariant = 'end';
+              break;
+            default:
+              key = pp.page;
+              children = pp.page;
+              pageVariant = 'standard';
+              break;
+          }
 
-        return (
-          <PageButton
-            limit={limit}
-            page={pp.page}
-            total={total}
-            centerRipple={centerRipple}
-            classes={buttonClasses}
-            currentPageColor={currentPageColor}
-            disabled={disabled}
-            disableFocusRipple={disableFocusRipple}
-            disableRipple={disableRipple}
-            fullWidth={fullWidth}
-            key={key}
-            onClick={onClick}
-            otherPageColor={otherPageColor}
-            pageVariant={pageVariant}
-            size={size}
-          >
-            {children}
-          </PageButton>
-        );
-      })}
+          return (
+            <PageButton
+              limit={limit}
+              page={pp.page}
+              total={total}
+              centerRipple={centerRipple}
+              classes={buttonClasses}
+              currentPageColor={currentPageColor}
+              disabled={disabled}
+              disableFocusRipple={disableFocusRipple}
+              disableRipple={disableRipple}
+              fullWidth={fullWidth}
+              key={key}
+              onClick={onClick}
+              otherPageColor={otherPageColor}
+              pageVariant={pageVariant}
+              size={size}
+            >
+              {children}
+            </PageButton>
+          );
+        }
+      )}
     </Component>
   );
 };
@@ -150,8 +159,10 @@ Pagination.defaultProps = {
   disableFocusRipple: false,
   disableRipple: false,
   fullWidth: false,
+  innerButtonCount: 2,
   nextPageLabel: '>',
   otherPageColor: 'primary',
+  outerButtonCount: 2,
   previousPageLabel: '<',
   reduced: false,
   size: 'medium'
