@@ -40,7 +40,7 @@ export interface PaginationProps
   offset: number;
   total: number;
   centerRipple?: boolean;
-  component?: React.ReactType<PaginationProps>;
+  component?: string | React.ComponentType<Partial<PaginationProps>>;
   currentPageColor?: PropTypes.Color;
   disabled?: boolean;
   disableFocusRipple?: boolean;
@@ -56,7 +56,9 @@ export interface PaginationProps
   size?: 'small' | 'medium' | 'large';
 }
 
-const Pagination: React.SFC<PaginationProps & WithStyles<PaginationClassKey>> = props => {
+const Pagination: React.FunctionComponent<
+  PaginationProps & WithStyles<PaginationClassKey>
+> = props => {
   const {
     limit,
     offset,

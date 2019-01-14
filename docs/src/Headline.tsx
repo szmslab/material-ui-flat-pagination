@@ -9,7 +9,7 @@ const styles = (theme: Theme) =>
     }
   });
 
-const Headline: React.SFC<WithStyles<typeof styles>> = props => {
+const Headline: React.FunctionComponent<WithStyles<typeof styles>> = props => {
   return <Typography variant="h5" {...props} />;
 };
 
