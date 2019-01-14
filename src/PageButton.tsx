@@ -109,16 +109,16 @@ export interface PageButtonProps extends StandardProps<ButtonProps, PageButtonCl
   total: number;
   pageVariant: PageVariant;
   currentPageColor?: PropTypes.Color;
-  onClick?: ((ev: React.MouseEvent<HTMLElement>, page: number) => void);
+  onClick?: ((ev: React.MouseEvent<HTMLElement>, offset: number, page: number) => void);
   otherPageColor?: PropTypes.Color;
 }
 
 const handleClick = (
   page: number,
   limit: number,
-  onClick: (ev: React.MouseEvent<HTMLElement>, offset: number) => void
+  onClick: (ev: React.MouseEvent<HTMLElement>, offset: number, page: number) => void
 ) => (ev: React.MouseEvent<HTMLElement>): void => {
-  onClick(ev, getOffset(page, limit));
+  onClick(ev, getOffset(page, limit), page);
 };
 
 const PageButton: React.FunctionComponent<
