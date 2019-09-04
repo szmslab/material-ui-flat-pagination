@@ -1,7 +1,7 @@
 {
   "name": "material-ui-flat-pagination",
   "description": "A pagination component for Material-UI using Button component.",
-  "version": "3.2.0",
+  "version": "3.2.1-SNAPSHOT",
   "author": "szmslab <szmslab@gmail.com> (https://github.com/szmslab)",
   "bugs": {
     "url": "https://github.com/szmslab/material-ui-flat-pagination/issues"
@@ -10,34 +10,34 @@
     "classnames": "^2.2.6"
   },
   "devDependencies": {
-    "@material-ui/core": "^3.8.3",
-    "@types/classnames": "^2.2.7",
-    "@types/enzyme": "^3.1.15",
-    "@types/enzyme-adapter-react-16": "^1.0.3",
-    "@types/jest": "^23.3.12",
-    "@types/react": "^16.7.18",
-    "@types/react-dom": "^16.0.11",
-    "coveralls": "^3.0.2",
-    "enzyme": "^3.8.0",
-    "enzyme-adapter-react-16": "^1.7.1",
-    "enzyme-to-json": "^3.3.5",
-    "jest": "^23.6.0",
-    "prettier": "^1.15.3",
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0",
-    "react-test-renderer": "^16.7.0",
-    "rimraf": "^2.6.3",
-    "ts-jest": "^23.10.5",
-    "tslint": "^5.12.1",
-    "tslint-config-prettier": "^1.17.0",
+    "@material-ui/core": "^3.9.3",
+    "@types/classnames": "^2.2.9",
+    "@types/enzyme": "^3.10.3",
+    "@types/enzyme-adapter-react-16": "^1.0.5",
+    "@types/jest": "^24.0.18",
+    "@types/react": "^16.9.2",
+    "@types/react-dom": "^16.9.0",
+    "coveralls": "^3.0.6",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "enzyme-to-json": "^3.4.0",
+    "jest": "^24.9.0",
+    "prettier": "^1.18.2",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-test-renderer": "^16.9.0",
+    "rimraf": "^3.0.0",
+    "ts-jest": "^24.0.2",
+    "tslint": "^5.19.0",
+    "tslint-config-prettier": "^1.18.0",
     "tslint-plugin-prettier": "^2.0.1",
-    "tslint-react": "^3.6.0",
-    "typescript": "^3.2.2"
+    "tslint-react": "^4.0.0",
+    "typescript": "^3.6.2"
   },
   "peerDependencies": {
-    "@material-ui/core": ">=1.0.0",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0"
+    "@material-ui/core": ">=1.0.0 <4.0.0",
+    "react": "^16.3.0",
+    "react-dom": "^16.3.0"
   },
   "files": [
     "lib",

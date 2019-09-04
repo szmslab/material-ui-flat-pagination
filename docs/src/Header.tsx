@@ -15,7 +15,7 @@ const styles = createStyles({
 
 export interface HeaderProps {
   darkTheme: boolean;
-  onClick: ((ev: React.MouseEvent<HTMLElement>) => void);
+  onClick: (ev: React.MouseEvent<HTMLElement>) => void;
 }
 
 const Header: React.FunctionComponent<HeaderProps & WithStyles<typeof styles>> = props => {

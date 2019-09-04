@@ -16,13 +16,16 @@ describe('computePages', () => {
     outerButtonCount: number
   ) => (patterns: (number | PagePosition[])[][]) => {
     describe(`limit: ${limit}, total: ${total}, innerButtonCount: ${innerButtonCount}, outerButtonCount: ${outerButtonCount}`, () => {
-      describe.each(patterns)('offset: %i', (offset: number, expected: PagePosition[]) => {
-        it(`=> ${JSON.stringify(expected)}`, () => {
-          expect(computePages(limit, offset, total, innerButtonCount, outerButtonCount)).toEqual(
-            expected
-          );
-        });
-      });
+      describe.each(patterns)(
+        'offset: %i',
+        (offset: number | PagePosition[], expected: number | PagePosition[]) => {
+          it(`=> ${JSON.stringify(expected)}`, () => {
+            expect(
+              computePages(limit, offset as number, total, innerButtonCount, outerButtonCount)
+            ).toEqual(expected as PagePosition[]);
+          });
+        }
+      );
     });
   };
 

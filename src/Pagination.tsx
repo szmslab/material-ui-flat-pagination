@@ -48,7 +48,7 @@ export interface PaginationProps
   fullWidth?: boolean;
   innerButtonCount?: number;
   nextPageLabel?: React.ReactNode;
-  onClick?: ((ev: React.MouseEvent<HTMLElement>, offset: number, page: number) => void);
+  onClick?: (ev: React.MouseEvent<HTMLElement>, offset: number, page: number) => void;
   otherPageColor?: PropTypes.Color;
   outerButtonCount?: number;
   previousPageLabel?: React.ReactNode;
