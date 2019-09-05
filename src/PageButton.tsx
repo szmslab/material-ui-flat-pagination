@@ -37,20 +37,20 @@ const styles = (theme: Theme) =>
       minWidth: 16
     },
     rootCurrent: {
-      paddingLeft: theme.spacing.unit * 1.5,
-      paddingRight: theme.spacing.unit * 1.5
+      paddingLeft: theme.spacing(1.5),
+      paddingRight: theme.spacing(1.5)
     },
     rootEllipsis: {
-      paddingLeft: theme.spacing.unit * 0.5,
-      paddingRight: theme.spacing.unit * 0.5
+      paddingLeft: theme.spacing(0.5),
+      paddingRight: theme.spacing(0.5)
     },
     rootEnd: {
-      paddingLeft: theme.spacing.unit * 1.5,
-      paddingRight: theme.spacing.unit * 1.5
+      paddingLeft: theme.spacing(1.5),
+      paddingRight: theme.spacing(1.5)
     },
     rootStandard: {
-      paddingLeft: theme.spacing.unit * 1.5,
-      paddingRight: theme.spacing.unit * 1.5
+      paddingLeft: theme.spacing(1.5),
+      paddingRight: theme.spacing(1.5)
     },
     label: {},
     text: {},
@@ -64,39 +64,39 @@ const styles = (theme: Theme) =>
       minWidth: 8
     },
     sizeSmallCurrent: {
-      paddingLeft: theme.spacing.unit,
-      paddingRight: theme.spacing.unit
+      paddingLeft: theme.spacing(1),
+      paddingRight: theme.spacing(1)
     },
     sizeSmallEllipsis: {
-      paddingLeft: theme.spacing.unit * 0.25,
-      paddingRight: theme.spacing.unit * 0.25
+      paddingLeft: theme.spacing(0.25),
+      paddingRight: theme.spacing(0.25)
     },
     sizeSmallEnd: {
-      paddingLeft: theme.spacing.unit,
-      paddingRight: theme.spacing.unit
+      paddingLeft: theme.spacing(1),
+      paddingRight: theme.spacing(1)
     },
     sizeSmallStandard: {
-      paddingLeft: theme.spacing.unit,
-      paddingRight: theme.spacing.unit
+      paddingLeft: theme.spacing(1),
+      paddingRight: theme.spacing(1)
     },
     sizeLarge: {
       minWidth: 24
     },
     sizeLargeCurrent: {
-      paddingLeft: theme.spacing.unit * 2,
-      paddingRight: theme.spacing.unit * 2
+      paddingLeft: theme.spacing(2),
+      paddingRight: theme.spacing(2)
     },
     sizeLargeEllipsis: {
-      paddingLeft: theme.spacing.unit * 0.75,
-      paddingRight: theme.spacing.unit * 0.75
+      paddingLeft: theme.spacing(0.75),
+      paddingRight: theme.spacing(0.75)
     },
     sizeLargeEnd: {
-      paddingLeft: theme.spacing.unit * 2,
-      paddingRight: theme.spacing.unit * 2
+      paddingLeft: theme.spacing(2),
+      paddingRight: theme.spacing(2)
     },
     sizeLargeStandard: {
-      paddingLeft: theme.spacing.unit * 2,
-      paddingRight: theme.spacing.unit * 2
+      paddingLeft: theme.spacing(2),
+      paddingRight: theme.spacing(2)
     },
     fullWidth: {}
   });
