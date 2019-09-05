@@ -1,4 +1,4 @@
-import { mount, ReactWrapper, render, shallow } from 'enzyme';
+import { mount, ReactWrapper, shallow } from 'enzyme';
 import * as React from 'react';
 import { findMuiButton, findPageButton } from './_utils';
 import Pagination, { PaginationProps } from '../src/index';
@@ -47,7 +47,7 @@ describe('Pagination', () => {
 
   describe('className: testClassName', () => {
     const expected = 'testClassName';
-    const wrapper = render(<Pagination limit={10} offset={0} total={10} className={expected} />);
+    const wrapper = shallow(<Pagination limit={10} offset={0} total={10} className={expected} />);
     it(`=> className of root: ${expected}`, () => {
       expect(wrapper.hasClass(expected)).toBe(true);
     });
@@ -55,9 +55,9 @@ describe('Pagination', () => {
 
   describe('component: nav', () => {
     const expected = 'nav';
-    const wrapper = render(<Pagination limit={10} offset={0} total={10} component={expected} />);
+    const wrapper = mount(<Pagination limit={10} offset={0} total={10} component={expected} />);
     it(`=> component of root: ${expected}`, () => {
-      expect(wrapper.prop('name')).toBe(expected);
+      expect(wrapper.find('.MuiFlatPagination-root').name()).toBe(expected);
     });
   });
 

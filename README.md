@@ -12,6 +12,7 @@ A pagination component for [Material-UI](https://material-ui.com/) using Button 
 
 | material-ui-flat-pagination | Material-UI |
 | --------------------------- | ----------- |
+| &gt;=4.0.0 | &gt;=4.0.0 |
 | &gt;=3.0.0 | &gt;=1.0.0 |
 | 2.x | 0.x |
 

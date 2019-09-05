@@ -32,7 +32,7 @@ export type PageButtonClassKey =
   | 'fullWidth';
 
 const styles = (theme: Theme) =>
-  createStyles<PageButtonClassKey>({
+  createStyles<PageButtonClassKey, PageButtonProps>({
     root: {
       minWidth: 16
     },

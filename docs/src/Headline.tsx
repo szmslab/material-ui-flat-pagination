@@ -5,7 +5,7 @@ import React from 'react';
 const styles = (theme: Theme) =>
   createStyles({
     root: {
-      marginBottom: theme.spacing.unit * 2
+      marginBottom: theme.spacing(2)
     }
   });
 

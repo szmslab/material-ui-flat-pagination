@@ -7,7 +7,7 @@ import { computePages, PagePosition, Position } from './core';
 
 export type PaginationClassKey = PageButtonClassKey;
 
-const styles = createStyles<PaginationClassKey>({
+const styles = createStyles<PaginationClassKey, PaginationProps>({
   root: {},
   rootCurrent: {},
   rootEllipsis: {},

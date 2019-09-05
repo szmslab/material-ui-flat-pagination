@@ -24,29 +24,24 @@ const muiTheme = {
     palette: {
       primary: blue,
       type: 'light'
-    },
-    typography: {
-      useNextVariants: true
     }
   }),
   dark: createMuiTheme({
     palette: {
       primary: blue,
       type: 'dark'
-    },
-    typography: {
-      useNextVariants: true
     }
   })
 };
 
 const styles = (theme: Theme) =>
   createStyles<
-    'paperRoot' | Extract<PaginationClassKey, 'colorInheritCurrent' | 'colorInheritOther'>
+    'paperRoot' | Extract<PaginationClassKey, 'colorInheritCurrent' | 'colorInheritOther'>,
+    {}
   >({
     paperRoot: {
-      margin: theme.spacing.unit * 2,
-      padding: theme.spacing.unit * 2
+      margin: theme.spacing(2),
+      padding: theme.spacing(2)
     },
     colorInheritCurrent: {
       color: deepOrange.A200,
