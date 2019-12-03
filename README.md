@@ -85,6 +85,7 @@ ReactDOM.render(<Example />, document.getElementById("root"));
 | `innerButtonCount` | number | 2 | The number of displayed standard page buttons adjacent to the current button. Allow a number greater than or equal to `0`. |
 | `nextPageLabel` | node | '>' | The content of the next page button. |
 | `onClick` | func |  | Callback fired when the button is clicked.<br><br>Signature:<br>`function(event: object, offset: number, page: number) => void`<br>event: The event source of the callback.<br>offset: The number of new offset.<br>page: The number of new page. |
+| `renderButton` | ({page, offset, children} => ReactElement) |  | This is a "render-prop" function that lets you wrap a page button with whatever you want. Main use case is to use `<a>` anchor for pagination: `({ page, children }) => <a href={`?page=${page}`}>{children}</a>` |
 | `otherPageColor` | enum:<br>&nbsp;'default' &#124;<br>&nbsp;'inherit' &#124;<br>&nbsp;'primary' &#124;<br>&nbsp;'secondary' | 'primary' | The color of the buttons of other pages excluding the current page. |
 | `outerButtonCount` | number | 2 | The number of standard page buttons displayed at the end. Allow a number greater than or equal to `1`. |
 | `previousPageLabel` | node | '<' | The content of the previous page button. |

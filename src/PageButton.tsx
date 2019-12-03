@@ -4,6 +4,7 @@ import Button, { ButtonProps } from '@material-ui/core/Button';
 import { createStyles, Theme, WithStyles, withStyles } from '@material-ui/core/styles';
 import classNames from 'classnames';
 import { getOffset } from './core';
+import { RenderButtonProps } from './Pagination';
 
 export type PageButtonClassKey =
   | 'root'
@@ -110,6 +111,7 @@ export interface PageButtonProps extends StandardProps<ButtonProps, PageButtonCl
   pageVariant: PageVariant;
   currentPageColor?: PropTypes.Color;
   onClick?: (ev: React.MouseEvent<HTMLElement>, offset: number, page: number) => void;
+  renderButton?: (props: RenderButtonProps) => React.ReactElement;
   otherPageColor?: PropTypes.Color;
 }
 
@@ -134,6 +136,7 @@ const PageButton: React.FunctionComponent<
     disabled: disabledProp,
     disableRipple: disableRippleProp,
     onClick: onClickProp,
+    renderButton,
     otherPageColor,
     size,
     ...other
@@ -189,12 +192,13 @@ const PageButton: React.FunctionComponent<
   const color = isCurrent ? currentPageColor : otherPageColor;
   const disabled = disabledProp || isEllipsis || page <= 0 || total <= 0;
   const disableRipple = disableRippleProp || disabled || isCurrent;
+  const isClickable = !disabled && (isEnd || isStandard);
   let onClick: ((ev: React.MouseEvent<HTMLElement>) => void) | undefined;
-  if (onClickProp && !disabled && (isEnd || isStandard)) {
+  if (isClickable && onClickProp) {
     onClick = handleClick(page, limit, onClickProp);
   }
 
-  return (
+  const button = (
     <Button
       classes={classes}
       color={color}
@@ -205,6 +209,12 @@ const PageButton: React.FunctionComponent<
       {...other}
     />
   );
+
+  if (renderButton && isClickable) {
+    return renderButton({ offset: getOffset(page, limit), page, children: button });
+  }
+
+  return button;
 };
 
 PageButton.defaultProps = {
