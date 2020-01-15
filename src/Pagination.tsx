@@ -34,6 +34,12 @@ const styles = createStyles<PaginationClassKey, PaginationProps>({
   fullWidth: {}
 });
 
+export interface RenderButtonProps {
+  offset: number;
+  page: number;
+  children: React.ReactNode;
+}
+
 export interface PaginationProps
   extends StandardProps<React.HTMLAttributes<HTMLDivElement>, PaginationClassKey, 'onClick'> {
   limit: number;
@@ -49,6 +55,7 @@ export interface PaginationProps
   innerButtonCount?: number;
   nextPageLabel?: React.ReactNode;
   onClick?: (ev: React.MouseEvent<HTMLElement>, offset: number, page: number) => void;
+  renderButton?: (props: RenderButtonProps) => React.ReactElement;
   otherPageColor?: PropTypes.Color;
   outerButtonCount?: number;
   previousPageLabel?: React.ReactNode;
@@ -75,6 +82,7 @@ const Pagination: React.FunctionComponent<
     nextPageLabel,
     innerButtonCount: innerButtonCountProp,
     onClick,
+    renderButton,
     otherPageColor,
     outerButtonCount: outerButtonCountProp,
     previousPageLabel,
@@ -137,6 +145,7 @@ const Pagination: React.FunctionComponent<
               fullWidth={fullWidth}
               key={key}
               onClick={onClick}
+              renderButton={renderButton}
               otherPageColor={otherPageColor}
               pageVariant={pageVariant}
               size={size}

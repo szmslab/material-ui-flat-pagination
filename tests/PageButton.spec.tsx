@@ -214,4 +214,39 @@ describe('PageButton', () => {
       });
     });
   });
+
+  describe('renderButton prop', () => {
+    describe('using page', () => {
+      const wrapper = mount(
+        <PageButton
+          page={1}
+          limit={10}
+          total={10}
+          pageVariant="current"
+          renderButton={({ page, children }) => <a href={`?page=${page}`}>{children}</a>}
+        >
+          {1}
+        </PageButton>
+      );
+
+      const link = wrapper.find('a');
+      expect(link.prop('href')).toEqual('?page=1');
+    });
+    describe('using offset', () => {
+      const wrapper = mount(
+        <PageButton
+          page={1}
+          limit={10}
+          total={10}
+          pageVariant="current"
+          renderButton={({ offset, children }) => <a href={`?offset=${offset}`}>{children}</a>}
+        >
+          {1}
+        </PageButton>
+      );
+
+      const link = wrapper.find('a');
+      expect(link.prop('href')).toEqual('?offset=0');
+    });
+  });
 });
