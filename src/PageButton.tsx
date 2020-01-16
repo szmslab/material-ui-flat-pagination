@@ -123,9 +123,8 @@ const handleClick = (
   onClick(ev, getOffset(page, limit), page);
 };
 
-const PageButton: React.FunctionComponent<
-  PageButtonProps & WithStyles<PageButtonClassKey>
-> = props => {
+const PageButton: React.FunctionComponent<PageButtonProps &
+  WithStyles<PageButtonClassKey>> = props => {
   const {
     limit,
     page,

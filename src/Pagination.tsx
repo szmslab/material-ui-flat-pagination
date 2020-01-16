@@ -63,9 +63,8 @@ export interface PaginationProps
   size?: 'small' | 'medium' | 'large';
 }
 
-const Pagination: React.FunctionComponent<
-  PaginationProps & WithStyles<PaginationClassKey>
-> = props => {
+const Pagination: React.FunctionComponent<PaginationProps &
+  WithStyles<PaginationClassKey>> = props => {
   const {
     limit,
     offset,
