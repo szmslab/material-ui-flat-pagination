@@ -9,7 +9,7 @@ import {
   MuiThemeProvider,
   Theme,
   WithStyles,
-  withStyles
+  withStyles,
 } from '@material-ui/core/styles';
 import { fade } from '@material-ui/core/styles/colorManipulator';
 import ArrowBack from '@material-ui/icons/ArrowBack';
@@ -23,15 +23,15 @@ const muiTheme = {
   light: createMuiTheme({
     palette: {
       primary: blue,
-      type: 'light'
-    }
+      type: 'light',
+    },
   }),
   dark: createMuiTheme({
     palette: {
       primary: blue,
-      type: 'dark'
-    }
-  })
+      type: 'dark',
+    },
+  }),
 };
 
 const styles = (theme: Theme) =>
@@ -41,26 +41,26 @@ const styles = (theme: Theme) =>
   >({
     paperRoot: {
       margin: theme.spacing(2),
-      padding: theme.spacing(2)
+      padding: theme.spacing(2),
     },
     colorInheritCurrent: {
       color: deepOrange.A200,
       '&:hover': {
-        backgroundColor: fade(deepOrange.A200, theme.palette.action.hoverOpacity)
-      }
+        backgroundColor: fade(deepOrange.A200, theme.palette.action.hoverOpacity),
+      },
     },
     colorInheritOther: {
       color: green['500'],
       '&:hover': {
-        backgroundColor: fade(green['500'], theme.palette.action.hoverOpacity)
-      }
-    }
+        backgroundColor: fade(green['500'], theme.palette.action.hoverOpacity),
+      },
+    },
   });
 
 enum PaginationType {
   Default = 'defaultPagination',
   Reduced = 'reducedPagination',
-  Styled = 'styledPagination'
+  Styled = 'styledPagination',
 }
 
 interface DemoPaginationState {
@@ -82,19 +82,19 @@ class Demo extends React.PureComponent<WithStyles<typeof styles>, DemoState> {
     defaultPagination: {
       limit: 10,
       offset: 0,
-      total: 1000
+      total: 1000,
     },
     reducedPagination: {
       limit: 10,
       offset: 0,
-      total: 1000
+      total: 1000,
     },
     styledPagination: {
       limit: 10,
       offset: 0,
-      total: 1000
+      total: 1000,
     },
-    isDarkTheme: false
+    isDarkTheme: false,
   };
 
   public render() {
@@ -103,7 +103,7 @@ class Demo extends React.PureComponent<WithStyles<typeof styles>, DemoState> {
     const { paperRoot, ...paginationClasses } = classes;
 
     const paperClasses = {
-      root: paperRoot
+      root: paperRoot,
     };
 
     const isDarkTheme = this.state.isDarkTheme;
@@ -158,15 +158,15 @@ class Demo extends React.PureComponent<WithStyles<typeof styles>, DemoState> {
       this.setState({
         [paginationType]: {
           ...this.state[paginationType],
-          offset
-        }
+          offset,
+        },
       });
     }, 240);
   };
 
   private handleToggleTheme = () => {
     this.setState({
-      isDarkTheme: !this.state.isDarkTheme
+      isDarkTheme: !this.state.isDarkTheme,
     });
   };
 }

@@ -35,23 +35,23 @@ export type PageButtonClassKey =
 const styles = (theme: Theme) =>
   createStyles<PageButtonClassKey, PageButtonProps>({
     root: {
-      minWidth: 16
+      minWidth: 16,
     },
     rootCurrent: {
       paddingLeft: theme.spacing(1.5),
-      paddingRight: theme.spacing(1.5)
+      paddingRight: theme.spacing(1.5),
     },
     rootEllipsis: {
       paddingLeft: theme.spacing(0.5),
-      paddingRight: theme.spacing(0.5)
+      paddingRight: theme.spacing(0.5),
     },
     rootEnd: {
       paddingLeft: theme.spacing(1.5),
-      paddingRight: theme.spacing(1.5)
+      paddingRight: theme.spacing(1.5),
     },
     rootStandard: {
       paddingLeft: theme.spacing(1.5),
-      paddingRight: theme.spacing(1.5)
+      paddingRight: theme.spacing(1.5),
     },
     label: {},
     text: {},
@@ -62,44 +62,44 @@ const styles = (theme: Theme) =>
     colorInheritOther: {},
     disabled: {},
     sizeSmall: {
-      minWidth: 8
+      minWidth: 8,
     },
     sizeSmallCurrent: {
       paddingLeft: theme.spacing(1),
-      paddingRight: theme.spacing(1)
+      paddingRight: theme.spacing(1),
     },
     sizeSmallEllipsis: {
       paddingLeft: theme.spacing(0.25),
-      paddingRight: theme.spacing(0.25)
+      paddingRight: theme.spacing(0.25),
     },
     sizeSmallEnd: {
       paddingLeft: theme.spacing(1),
-      paddingRight: theme.spacing(1)
+      paddingRight: theme.spacing(1),
     },
     sizeSmallStandard: {
       paddingLeft: theme.spacing(1),
-      paddingRight: theme.spacing(1)
+      paddingRight: theme.spacing(1),
     },
     sizeLarge: {
-      minWidth: 24
+      minWidth: 24,
     },
     sizeLargeCurrent: {
       paddingLeft: theme.spacing(2),
-      paddingRight: theme.spacing(2)
+      paddingRight: theme.spacing(2),
     },
     sizeLargeEllipsis: {
       paddingLeft: theme.spacing(0.75),
-      paddingRight: theme.spacing(0.75)
+      paddingRight: theme.spacing(0.75),
     },
     sizeLargeEnd: {
       paddingLeft: theme.spacing(2),
-      paddingRight: theme.spacing(2)
+      paddingRight: theme.spacing(2),
     },
     sizeLargeStandard: {
       paddingLeft: theme.spacing(2),
-      paddingRight: theme.spacing(2)
+      paddingRight: theme.spacing(2),
     },
-    fullWidth: {}
+    fullWidth: {},
   });
 
 export type PageVariant = 'current' | 'ellipsis' | 'end' | 'standard';
@@ -123,8 +123,9 @@ const handleClick = (
   onClick(ev, getOffset(page, limit), page);
 };
 
-const PageButton: React.FunctionComponent<PageButtonProps &
-  WithStyles<PageButtonClassKey>> = props => {
+const PageButton: React.FunctionComponent<PageButtonProps & WithStyles<PageButtonClassKey>> = (
+  props
+) => {
   const {
     limit,
     page,
@@ -170,23 +171,23 @@ const PageButton: React.FunctionComponent<PageButtonProps &
     [rootCurrent]: isCurrent,
     [rootEllipsis]: isEllipsis,
     [rootEnd]: isEnd,
-    [rootStandard]: isStandard
+    [rootStandard]: isStandard,
   });
   classes.colorInherit = classNames(classes.colorInherit, {
     [colorInheritCurrent]: isCurrent,
-    [colorInheritOther]: !isCurrent
+    [colorInheritOther]: !isCurrent,
   });
   classes.sizeSmall = classNames(classes.sizeSmall, {
     [sizeSmallCurrent]: isCurrent && isSmall,
     [sizeSmallEllipsis]: isEllipsis && isSmall,
     [sizeSmallEnd]: isEnd && isSmall,
-    [sizeSmallStandard]: isStandard && isSmall
+    [sizeSmallStandard]: isStandard && isSmall,
   });
   classes.sizeLarge = classNames(classes.sizeLarge, {
     [sizeLargeCurrent]: isCurrent && isLarge,
     [sizeLargeEllipsis]: isEllipsis && isLarge,
     [sizeLargeEnd]: isEnd && isLarge,
-    [sizeLargeStandard]: isStandard && isLarge
+    [sizeLargeStandard]: isStandard && isLarge,
   });
   const color = isCurrent ? currentPageColor : otherPageColor;
   const disabled = disabledProp || isEllipsis || page <= 0 || total <= 0;
@@ -222,11 +223,11 @@ PageButton.defaultProps = {
   total: 0,
   pageVariant: 'standard',
   disabled: false,
-  disableRipple: false
+  disableRipple: false,
 };
 
 const PageButtonWithStyles: React.ComponentType<PageButtonProps> = withStyles(styles, {
-  name: 'MuiFlatPageButton'
+  name: 'MuiFlatPageButton',
 })(PageButton);
 
 export default PageButtonWithStyles;

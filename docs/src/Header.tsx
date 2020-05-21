@@ -9,8 +9,8 @@ import LightBulbIcon from './LightBulbIcon';
 
 const styles = createStyles({
   titleRoot: {
-    flex: 1
-  }
+    flex: 1,
+  },
 });
 
 export interface HeaderProps {
@@ -18,7 +18,7 @@ export interface HeaderProps {
   onClick: (ev: React.MouseEvent<HTMLElement>) => void;
 }
 
-const Header: React.FunctionComponent<HeaderProps & WithStyles<typeof styles>> = props => {
+const Header: React.FunctionComponent<HeaderProps & WithStyles<typeof styles>> = (props) => {
   const { classes, darkTheme, onClick } = props;
   const titleClasses = { root: classes.titleRoot };
   return (

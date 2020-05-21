@@ -31,7 +31,7 @@ const styles = createStyles<PaginationClassKey, PaginationProps>({
   sizeLargeEllipsis: {},
   sizeLargeEnd: {},
   sizeLargeStandard: {},
-  fullWidth: {}
+  fullWidth: {},
 });
 
 export interface RenderButtonProps {
@@ -63,8 +63,9 @@ export interface PaginationProps
   size?: 'small' | 'medium' | 'large';
 }
 
-const Pagination: React.FunctionComponent<PaginationProps &
-  WithStyles<PaginationClassKey>> = props => {
+const Pagination: React.FunctionComponent<PaginationProps & WithStyles<PaginationClassKey>> = (
+  props
+) => {
   const {
     limit,
     offset,
@@ -175,11 +176,11 @@ Pagination.defaultProps = {
   outerButtonCount: 2,
   previousPageLabel: '<',
   reduced: false,
-  size: 'medium'
+  size: 'medium',
 };
 
 const PaginationWithStyles: React.ComponentType<PaginationProps> = withStyles(styles, {
-  name: 'MuiFlatPagination'
+  name: 'MuiFlatPagination',
 })(Pagination);
 
 export default PaginationWithStyles;

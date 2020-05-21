@@ -4,7 +4,7 @@ export const enum Position {
   HighEllipsis,
   LowEnd,
   HighEnd,
-  Standard
+  Standard,
 }
 
 export interface PagePosition {
@@ -15,7 +15,7 @@ export interface PagePosition {
 const createPagePosition = (position: Position, page: number = 0): PagePosition => {
   return {
     page,
-    position
+    position,
   };
 };
 

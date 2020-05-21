@@ -5,11 +5,11 @@ import React from 'react';
 const styles = (theme: Theme) =>
   createStyles({
     root: {
-      marginBottom: theme.spacing(2)
-    }
+      marginBottom: theme.spacing(2),
+    },
   });
 
-const Headline: React.FunctionComponent<WithStyles<typeof styles>> = props => {
+const Headline: React.FunctionComponent<WithStyles<typeof styles>> = (props) => {
   return <Typography variant="h5" {...props} />;
 };
 
