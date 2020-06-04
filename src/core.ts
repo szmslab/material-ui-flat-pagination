@@ -12,7 +12,7 @@ export interface PagePosition {
   position: Position;
 }
 
-const createPagePosition = (position: Position, page: number = 0): PagePosition => {
+const createPagePosition = (position: Position, page = 0): PagePosition => {
   return {
     page,
     position,

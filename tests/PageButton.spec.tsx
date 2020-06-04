@@ -15,7 +15,7 @@ describe('PageButton', () => {
     pageVariant,
     currentPageColor: 'secondary' as PropTypes.Color,
     otherPageColor: 'primary' as PropTypes.Color,
-    onClick: mockFn
+    onClick: mockFn,
   });
 
   const _test = (pageVariant: PageVariant) => (callback: (pageVariant: PageVariant) => void) => {
@@ -71,7 +71,7 @@ describe('PageButton', () => {
     }
   }
 
-  _test('current')(pageVariant => {
+  _test('current')((pageVariant) => {
     describe('page: 1, limit: 10, total: 10', () => {
       const wrapper = mount(
         <PageButton page={1} limit={10} total={10} {...createProps(pageVariant)}>
@@ -89,7 +89,7 @@ describe('PageButton', () => {
     });
   });
 
-  _test('ellipsis')(pageVariant => {
+  _test('ellipsis')((pageVariant) => {
     describe('page: 0, limit: 10, total: 10', () => {
       const wrapper = mount(
         <PageButton page={0} limit={10} total={10} {...createProps(pageVariant)}>
@@ -107,7 +107,7 @@ describe('PageButton', () => {
     });
   });
 
-  _test('end')(pageVariant => {
+  _test('end')((pageVariant) => {
     describe('page: 0, limit: 10, total: 10', () => {
       const wrapper = mount(
         <PageButton page={0} limit={10} total={10} {...createProps(pageVariant)}>
@@ -141,7 +141,7 @@ describe('PageButton', () => {
     });
   });
 
-  _test('standard')(pageVariant => {
+  _test('standard')((pageVariant) => {
     describe('page: 1, limit: 10, total: 0', () => {
       const wrapper = mount(
         <PageButton page={1} limit={10} total={0} {...createProps(pageVariant)}>
@@ -207,8 +207,8 @@ describe('PageButton', () => {
       'sizeLargeEllipsis',
       'sizeLargeEnd',
       'sizeLargeStandard',
-      'fullWidth'
-    ].forEach(propertyName => {
+      'fullWidth',
+    ].forEach((propertyName) => {
       it(`=> ${propertyName}`, () => {
         expect(classes).toHaveProperty(propertyName);
       });
@@ -251,6 +251,30 @@ describe('PageButton', () => {
 
       const link = wrapper.find('a');
       expect(link.prop('href')).toBe('?offset=0');
+    });
+  });
+
+  describe('non nullable default props', () => {
+    const page: number | undefined = undefined;
+    const limit: number | undefined = undefined;
+    const total: number | undefined = undefined;
+    const pageVariant: PageVariant | undefined = undefined;
+
+    const wrapper = mount(
+      <PageButton page={page!} limit={limit!} total={total!} pageVariant={pageVariant!}>
+        {'default'}
+      </PageButton>
+    );
+
+    it(`=> disabled: true`, () => {
+      expect(findMuiButton(wrapper).prop('disabled')).toBe(true);
+    });
+
+    it(`=> MuiFlatPageButton-rootStandard`, () => {
+      const classes = findMuiButton(wrapper).prop('classes');
+      expect(classes && (classes.root || '').indexOf('MuiFlatPageButton-rootStandard') >= 0).toBe(
+        true
+      );
     });
   });
 });

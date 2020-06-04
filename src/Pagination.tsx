@@ -63,42 +63,38 @@ export interface PaginationProps
   size?: 'small' | 'medium' | 'large';
 }
 
-const Pagination: React.FunctionComponent<PaginationProps & WithStyles<PaginationClassKey>> = (
-  props
-) => {
-  const {
-    limit,
-    offset,
-    total,
-    centerRipple,
-    classes,
-    className: classNameProp,
-    component,
-    currentPageColor,
-    disabled,
-    disableFocusRipple,
-    disableRipple,
-    fullWidth,
-    nextPageLabel,
-    innerButtonCount: innerButtonCountProp,
-    onClick,
-    renderButton,
-    otherPageColor,
-    outerButtonCount: outerButtonCountProp,
-    previousPageLabel,
-    reduced,
-    size,
-    ...other
-  } = props;
-
+const Pagination: React.FunctionComponent<PaginationProps & WithStyles<PaginationClassKey>> = ({
+  limit = 1,
+  offset = 0,
+  total = 0,
+  centerRipple = false,
+  classes,
+  className: classNameProp,
+  component = 'div',
+  currentPageColor = 'secondary',
+  disabled = false,
+  disableFocusRipple = false,
+  disableRipple = false,
+  fullWidth = false,
+  innerButtonCount: innerButtonCountProp = 2,
+  nextPageLabel = '>',
+  onClick,
+  otherPageColor = 'primary',
+  outerButtonCount: outerButtonCountProp = 2,
+  previousPageLabel = '<',
+  reduced = false,
+  renderButton,
+  size = 'medium',
+  ...other
+}) => {
   const { root, ...buttonClasses } = classes;
 
   const className = classNames(root, classNameProp);
 
-  const innerButtonCount = reduced ? 1 : innerButtonCountProp!;
-  const outerButtonCount = reduced ? 1 : outerButtonCountProp!;
+  const innerButtonCount = reduced ? 1 : innerButtonCountProp;
+  const outerButtonCount = reduced ? 1 : outerButtonCountProp;
 
-  const Component = component!;
+  const Component = component;
   return (
     <Component className={className} {...other}>
       {computePages(limit, offset, total, innerButtonCount, outerButtonCount).map(
@@ -157,26 +153,6 @@ const Pagination: React.FunctionComponent<PaginationProps & WithStyles<Paginatio
       )}
     </Component>
   );
-};
-
-Pagination.defaultProps = {
-  limit: 1,
-  offset: 0,
-  total: 0,
-  centerRipple: false,
-  component: 'div',
-  currentPageColor: 'secondary',
-  disabled: false,
-  disableFocusRipple: false,
-  disableRipple: false,
-  fullWidth: false,
-  innerButtonCount: 2,
-  nextPageLabel: '>',
-  otherPageColor: 'primary',
-  outerButtonCount: 2,
-  previousPageLabel: '<',
-  reduced: false,
-  size: 'medium',
 };
 
 const PaginationWithStyles: React.ComponentType<PaginationProps> = withStyles(styles, {

@@ -123,25 +123,21 @@ const handleClick = (
   onClick(ev, getOffset(page, limit), page);
 };
 
-const PageButton: React.FunctionComponent<PageButtonProps & WithStyles<PageButtonClassKey>> = (
-  props
-) => {
-  const {
-    limit,
-    page,
-    total,
-    pageVariant,
-    classes: classesProp,
-    currentPageColor,
-    disabled: disabledProp,
-    disableRipple: disableRippleProp,
-    onClick: onClickProp,
-    renderButton,
-    otherPageColor,
-    size,
-    ...other
-  } = props;
-
+const PageButton: React.FunctionComponent<PageButtonProps & WithStyles<PageButtonClassKey>> = ({
+  limit = 1,
+  page = 0,
+  total = 0,
+  pageVariant = 'standard',
+  classes: classesProp,
+  currentPageColor,
+  disabled: disabledProp = false,
+  disableRipple: disableRippleProp = false,
+  onClick: onClickProp,
+  renderButton,
+  otherPageColor,
+  size,
+  ...other
+}) => {
   const isCurrent = pageVariant === 'current';
   const isEllipsis = pageVariant === 'ellipsis';
   const isEnd = pageVariant === 'end';
@@ -215,15 +211,6 @@ const PageButton: React.FunctionComponent<PageButtonProps & WithStyles<PageButto
   }
 
   return button;
-};
-
-PageButton.defaultProps = {
-  limit: 1,
-  page: 0,
-  total: 0,
-  pageVariant: 'standard',
-  disabled: false,
-  disableRipple: false,
 };
 
 const PageButtonWithStyles: React.ComponentType<PageButtonProps> = withStyles(styles, {

@@ -1,7 +1,7 @@
 import { mount, ReactWrapper, shallow } from 'enzyme';
 import * as React from 'react';
 import { findMuiButton, findPageButton } from './_utils';
-import Pagination, { PaginationProps } from '../src/index';
+import Pagination, { PaginationProps } from '../src';
 import { PageVariant } from '../src/PageButton';
 
 describe('Pagination', () => {
@@ -25,7 +25,7 @@ describe('Pagination', () => {
             limit,
             offset,
             total,
-            ...props
+            ...props,
           };
           const wrapper = mount(<Pagination {...mergedProps} />);
           callback(mergedProps, wrapper);
@@ -38,7 +38,7 @@ describe('Pagination', () => {
     _test(`${key}: ${props[key]}`, props, (props, wrapper) => {
       const expected = !!props[key];
       it(`=> ${key} of buttons: ${expected}`, () => {
-        findPageButton(wrapper).forEach(pageButton => {
+        findPageButton(wrapper).forEach((pageButton) => {
           expect(pageButton.prop(key)).toBe(expected);
         });
       });
@@ -64,7 +64,7 @@ describe('Pagination', () => {
   _test('currentPageColor: inherit', { currentPageColor: 'inherit' }, (props, wrapper) => {
     const expected = props.currentPageColor;
     it(`=> color of current page button: ${expected}`, () => {
-      findPageButton(wrapper).forEach(pageButton => {
+      findPageButton(wrapper).forEach((pageButton) => {
         const isCurrent = pageButton.prop('pageVariant') === 'current';
         expect(findMuiButton(pageButton).prop('color')).toBe(isCurrent ? expected : 'primary');
       });
@@ -74,7 +74,7 @@ describe('Pagination', () => {
   _test('otherPageColor: inherit', { otherPageColor: 'inherit' }, (props, wrapper) => {
     const expected = props.otherPageColor;
     it(`=> color of other page buttons: ${expected}`, () => {
-      findPageButton(wrapper).forEach(pageButton => {
+      findPageButton(wrapper).forEach((pageButton) => {
         const isCurrent = pageButton.prop('pageVariant') === 'current';
         expect(findMuiButton(pageButton).prop('color')).toBe(isCurrent ? 'secondary' : expected);
       });
@@ -94,6 +94,22 @@ describe('Pagination', () => {
     it(`=> label of previous page button: ${expected}`, () => {
       const pageButton = findPageButton(wrapper).first();
       expect(pageButton.text()).toBe(expected);
+    });
+  });
+
+  _test('innerButtonCount: 1', { innerButtonCount: 1 }, (props, wrapper) => {
+    const index = props.offset / 10;
+    const expected = [8, 8, 9, 10, 11, 10, 9, 8, 8][index];
+    it(`=> count of buttons: ${expected}`, () => {
+      expect(findPageButton(wrapper).length).toBe(expected);
+    });
+  });
+
+  _test('outerButtonCount: 1', { outerButtonCount: 1 }, (props, wrapper) => {
+    const index = props.offset / 10;
+    const expected = [9, 9, 9, 10, 11, 10, 9, 9, 9][index];
+    it(`=> count of buttons: ${expected}`, () => {
+      expect(findPageButton(wrapper).length).toBe(expected);
     });
   });
 
@@ -148,7 +164,7 @@ describe('Pagination', () => {
   _test('size: large', { size: 'large' }, (props, wrapper) => {
     const expected = props.size;
     it(`=> size of buttons: ${expected}`, () => {
-      findPageButton(wrapper).forEach(pageButton => {
+      findPageButton(wrapper).forEach((pageButton) => {
         expect(findMuiButton(pageButton).prop('size')).toBe(expected);
       });
     });
@@ -197,11 +213,55 @@ describe('Pagination', () => {
       'sizeLargeEllipsis',
       'sizeLargeEnd',
       'sizeLargeStandard',
-      'fullWidth'
-    ].forEach(propertyName => {
+      'fullWidth',
+    ].forEach((propertyName) => {
       it(`=> ${propertyName}`, () => {
         expect(classes).toHaveProperty(propertyName);
       });
+    });
+  });
+
+  describe('non nullable default props', () => {
+    const limit: number | undefined = undefined;
+    const offset: number | undefined = undefined;
+    const total: number | undefined = undefined;
+
+    const wrapper = mount(<Pagination limit={limit!} offset={offset!} total={total!} />);
+
+    it(`=> count of buttons: 3`, () => {
+      expect(findPageButton(wrapper).length).toBe(3);
+    });
+
+    it(`=> pageVariant of buttons: ['end' ,'current', 'end']`, () => {
+      expect(
+        findPageButton(wrapper).map((pageButton) => {
+          return {
+            limit: pageButton.prop('limit'),
+            page: pageButton.prop('page'),
+            total: pageButton.prop('total'),
+            pageVariant: pageButton.prop('pageVariant'),
+          };
+        })
+      ).toEqual([
+        {
+          limit: 1,
+          page: 0,
+          total: 0,
+          pageVariant: 'end' as PageVariant,
+        },
+        {
+          limit: 1,
+          page: 1,
+          total: 0,
+          pageVariant: 'current' as PageVariant,
+        },
+        {
+          limit: 1,
+          page: 0,
+          total: 0,
+          pageVariant: 'end' as PageVariant,
+        },
+      ]);
     });
   });
 });

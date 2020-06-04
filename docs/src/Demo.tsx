@@ -37,7 +37,7 @@ const muiTheme = {
 const styles = (theme: Theme) =>
   createStyles<
     'paperRoot' | Extract<PaginationClassKey, 'colorInheritCurrent' | 'colorInheritOther'>,
-    {}
+    Record<string, unknown>
   >({
     paperRoot: {
       margin: theme.spacing(2),
@@ -171,4 +171,4 @@ class Demo extends React.PureComponent<WithStyles<typeof styles>, DemoState> {
   };
 }
 
-export default withStyles(styles)(Demo) as React.ComponentType<{}>;
+export default withStyles(styles)(Demo) as React.ComponentType<Record<string, unknown>>;
