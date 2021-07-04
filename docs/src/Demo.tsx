@@ -150,19 +150,17 @@ class Demo extends React.PureComponent<WithStyles<typeof styles>, DemoState> {
     );
   }
 
-  private handleClick = (paginationType: PaginationType) => (
-    ev: React.MouseEvent<HTMLElement>,
-    offset: number
-  ) => {
-    setTimeout(() => {
-      this.setState({
-        [paginationType]: {
-          ...this.state[paginationType],
-          offset,
-        },
-      });
-    }, 240);
-  };
+  private handleClick =
+    (paginationType: PaginationType) => (ev: React.MouseEvent<HTMLElement>, offset: number) => {
+      setTimeout(() => {
+        this.setState({
+          [paginationType]: {
+            ...this.state[paginationType],
+            offset,
+          },
+        });
+      }, 240);
+    };
 
   private handleToggleTheme = () => {
     this.setState({

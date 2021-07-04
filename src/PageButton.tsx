@@ -115,13 +115,15 @@ export interface PageButtonProps extends StandardProps<ButtonProps, PageButtonCl
   otherPageColor?: PropTypes.Color;
 }
 
-const handleClick = (
-  page: number,
-  limit: number,
-  onClick: (ev: React.MouseEvent<HTMLElement>, offset: number, page: number) => void
-) => (ev: React.MouseEvent<HTMLElement>): void => {
-  onClick(ev, getOffset(page, limit), page);
-};
+const handleClick =
+  (
+    page: number,
+    limit: number,
+    onClick: (ev: React.MouseEvent<HTMLElement>, offset: number, page: number) => void
+  ) =>
+  (ev: React.MouseEvent<HTMLElement>): void => {
+    onClick(ev, getOffset(page, limit), page);
+  };
 
 const PageButton: React.FunctionComponent<PageButtonProps & WithStyles<PageButtonClassKey>> = ({
   limit = 1,
